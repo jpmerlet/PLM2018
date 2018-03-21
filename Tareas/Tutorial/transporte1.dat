@@ -1,0 +1,25 @@
+set ORIG:= CHUQUI TENIEN SALVAD ANDIN;
+set DEST:= STGO CONCE VALPO;
+
+param P:=
+CHUQUI 400
+TENIEN 400
+SALVAD 64
+ANDIN 236;
+
+param Q:=
+STGO 350
+CONCE 300
+VALPO 450;
+
+set E: STGO CONCE VALPO :=
+CHUQUI  +     +     +
+TENIEN  +     -     +
+SALVAD  +     +     +
+ANDIN   +     +     -;
+
+param c: STGO CONCE VALPO :=
+CHUQUI   30    45     10 
+TENIEN   10     .     20
+SALVAD	 12    15     15
+ANDIN    20    10      . ;
