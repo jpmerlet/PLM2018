@@ -1,0 +1,78 @@
+reset;
+# se carga el modelo
+model sudoku-donoso.mod;
+
+option presolve 0;
+option solver cplex;
+option display_1col 0;
+param input_file symbolic;
+param output_file symbolic;
+param es_factible symbolic;
+
+#read n, {(i,j) in {1..N} cross {1..N}} Q[i,j] <sudoku-01.txt;close sudoku-01.txt;
+#solve;
+
+#for {(i,j,k) in 1..N cross 1..N cross 1..N}
+#{
+#	if x[i,j,k]==1 then
+#	{
+#		let Q[i,j]:=k;
+#	}
+#}
+
+#display Q, solve_result_num;
+#reset data n;
+#reset data Q;
+
+#read n, {(i,j) in {1..N} cross {1..N}} Q[i,j] <sudoku-03.txt;close sudoku-03.txt;
+#solve;
+
+#for {(i,j,k) in 1..N cross 1..N cross 1..N}
+#{
+#	if x[i,j,k]==1 then
+#	{
+#		let Q[i,j]:=k;
+#	}
+#}
+	
+#display Q,solve_result_num;
+
+printf "Sudoku\nAutor: Juan Pablo Donoso Merlet\n\nInstancia      - N    - factible?  - tiempo\n" > sudoku-reporte.txt;
+for {num_archivo in {1..20}}
+{
+	reset data n,Q;
+	if num_archivo<10 then
+	{
+		let input_file:= 'sudoku-0'& num_archivo &'.txt';
+		let output_file:= 'sudoku-'&'donoso'&'-0'& num_archivo &'.txt';
+	}
+	else
+	{
+		let input_file:= 'sudoku-'& num_archivo &'.txt';
+		let output_file:= 'sudoku-'&'donoso'&'-'& num_archivo &'.txt';
+	}
+	read n, {(i,j) in {1..N} cross {1..N}} Q[i,j] < (input_file);close input_file;
+	solve;
+	for {(i,j,k) in 1..N cross 1..N cross 1..N}
+	{
+		if x[i,j,k]==1 then
+		{
+			let Q[i,j]:=k;
+		}
+	}
+	display Q;
+	# escribir matriz resultante en caso de que haya solucion
+	if solve_result_num==2 then
+	{
+		let es_factible:="si";
+		display Q > (output_file);
+	}
+	# si no, entonces escribir que es infactible
+	if solve_result_num==220 then
+	{
+		let es_factible:="no";
+		print "infactible" > (output_file);
+	}
+	# escribir reporte
+	printf "%12s  -%2d    - %2s         - %6f\n", (input_file),(N),(es_factible),(_total_solve_system_time) >> sudoku-reporte.txt;
+}
