@@ -1,0 +1,27 @@
+reset;
+param nombre symbolic;
+param n;
+param p := 70;
+param wMin := 1;
+param wMax := 150;
+for {k in 1..10}
+{
+	let nombre := "grafo"&k&".dat" ;
+	let n := 10+k;
+
+	printf "set V:=" > (nombre);
+	for{i in 1..n}
+	{
+		printf " %d", i  >> (nombre);
+	}     
+	printf ";\n">> (nombre);
+	printf "param: E: w:=">> (nombre); 
+	for{i in 1..n}
+	{
+		for {j in (i+1)..n}
+		{
+			if (Uniform(0,100)<p) then printf "\n%d %d %d", i , j , trunc(Uniform(wMin,wMax))>> (nombre); 	
+		}
+	}
+	printf ";" >>  (nombre); 
+}

@@ -1,0 +1,27 @@
+reset;
+option solver cplex;
+model modeloConect.mod;
+data grafo1.dat;
+solve;
+print "modeloConect.mod" > "auxiliar1a.txt";
+display solve_message  >> "auxiliar1a.txt";
+display x >> "auxiliar1a.txt";
+print "";
+
+reset;
+model modeloCiclos.mod;
+data grafo1.dat;
+solve;
+print "modeloCiclos.mod" >> "auxiliar1a.txt";
+display solve_message  >> "auxiliar1a.txt";
+display x >> "auxiliar1a.txt";
+print "";
+
+reset;
+model modeloFlujos.mod;
+data grafo1.dat;
+solve;
+print "modeloFlujos.mod" >> "auxiliar1a.txt";
+display solve_message  >> "auxiliar1a.txt";
+display x >> "auxiliar1a.txt";
+print "";

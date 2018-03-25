@@ -1,0 +1,40 @@
+modeloConect.mod
+ Instancia  |  n  |  m  | Tiempo [s] | Costo | Costo (Relajado) | Iteraciones | Nodos ByB
+  grafo1.dat|   11|   36|           0|    178|        169.500000|            4|         0
+  grafo2.dat|   12|   43|           0|    207|        207.000000|            2|         0
+  grafo3.dat|   13|   51|           0|    290|        285.333333|           14|         0
+  grafo4.dat|   14|   65|           0|    284|        249.000000|          100|         0
+  grafo5.dat|   15|   70|           0|    244|        244.000000|           53|         0
+  grafo6.dat|   16|   75|           2|    240|        237.000000|          103|         0
+  grafo7.dat|   17|   93|           4|    272|        269.250000|          103|         0
+  grafo8.dat|   18|  110|          11|    250|        243.500000|          114|         0
+  grafo9.dat|   19|  123|          25|    188|        187.500000|          119|         0
+ grafo10.dat|   20|  139|          82|    209|        191.500000|          253|         0
+
+
+modeloCiclos.mod
+ Instancia  |  n  |  m  | Tiempo [s] | Costo | Costo (Relajado) | Iteraciones | Nodos ByB
+  grafo1.dat|   11|   36|           0|    178|        178.000000|            8|         0
+  grafo2.dat|   12|   43|           0|    207|        207.000000|            3|         0
+  grafo3.dat|   13|   51|           0|    290|        290.000000|           34|         0
+  grafo4.dat|   14|   65|           0|    284|        284.000000|           41|         0
+  grafo5.dat|   15|   70|           0|    244|        244.000000|           36|         0
+  grafo6.dat|   16|   75|           0|    240|        240.000000|           35|         0
+  grafo7.dat|   17|   93|           1|    272|        272.000000|           76|         0
+  grafo8.dat|   18|  110|           4|    250|        250.000000|           76|         0
+  grafo9.dat|   19|  123|           9|    188|        188.000000|           76|         0
+ grafo10.dat|   20|  139|          22|    209|        209.000000|           83|         0
+
+
+modeloFlujos.mod
+ Instancia  |  n  |  m  | Tiempo [s] | Costo | Costo (Relajado) | Iteraciones | Nodos ByB
+  grafo1.dat|   11|   36|           0|    178|         48.300000|           98|         0
+  grafo2.dat|   12|   43|           0|    207|         72.545455|          146|         0
+  grafo3.dat|   13|   51|           0|    290|        104.250000|          131|         0
+  grafo4.dat|   14|   65|           0|    284|         47.153846|          304|         0
+  grafo5.dat|   15|   70|           0|    244|         71.857143|          146|         0
+  grafo6.dat|   16|   75|           0|    240|         90.733333|          291|         0
+  grafo7.dat|   17|   93|           1|    272|         47.000000|          186|         0
+  grafo8.dat|   18|  110|           1|    250|         48.705882|          287|         0
+  grafo9.dat|   19|  123|           1|    188|         41.888889|          517|         0
+ grafo10.dat|   20|  139|           1|    209|         57.105263|          528|         0

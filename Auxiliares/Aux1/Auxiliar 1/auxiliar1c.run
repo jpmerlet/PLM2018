@@ -1,0 +1,69 @@
+reset;
+option solver cplex;
+model modeloConect.mod;
+param datos symbolic;
+param solucionRelax;
+param iteraciones symbolic;
+param byb symbolic;
+
+print "modeloConect.mod"> "auxiliar1c.txt";
+print " Instancia  |  n  |  m  | Tiempo [s] | Costo | Costo (Relajado) | Iteraciones | Nodos ByB" >> "auxiliar1c.txt";
+for {i in 1..10}
+{
+	let datos :="grafo"&i&".dat";
+	data (datos);
+	option cplex_options 'relax';
+	solve;
+	option cplex_options '';
+	let solucionRelax := peso;
+	solve;
+	let iteraciones := substr(solve_message,match(solve_message,"\n")+1,match(solve_message," MIP")-match(solve_message, "\n")-1);
+	let byb := substr(solve_message,match(solve_message,"s\n")+2,match(solve_message," branch")-match(solve_message, "s\n")-2);
+	printf "%12s|%5d|%5d|%12d|%7d|%18f|%13s|%10s\n", (datos), (n), (m), (_total_solve_system_time), (peso), (solucionRelax), (iteraciones), (byb) >> "auxiliar1c.txt";
+	reset data;
+}
+
+reset;
+model modeloCiclos.mod;
+param datos symbolic;
+param solucionRelax;
+param iteraciones symbolic;
+param byb symbolic;
+printf "\n\nmodeloCiclos.mod\n" >> "auxiliar1c.txt";
+print " Instancia  |  n  |  m  | Tiempo [s] | Costo | Costo (Relajado) | Iteraciones | Nodos ByB" >> "auxiliar1c.txt";
+for {i in 1..10}
+{
+	let datos :="grafo"&i&".dat";
+	data (datos);
+	option cplex_options 'relax';
+	solve;
+	option cplex_options '';
+	let solucionRelax := peso;
+	solve;
+	let iteraciones := substr(solve_message,match(solve_message,"\n")+1,match(solve_message," MIP")-match(solve_message, "\n")-1);
+	let byb := substr(solve_message,match(solve_message,"s\n")+2,match(solve_message," branch")-match(solve_message, "s\n")-2);
+	printf "%12s|%5d|%5d|%12d|%7d|%18f|%13s|%10s\n", (datos), (n), (m), (_total_solve_system_time), (peso), (solucionRelax), (iteraciones), (byb) >> "auxiliar1c.txt";
+	reset data;
+}
+reset;
+model modeloFlujos.mod;
+param datos symbolic;
+param solucionRelax;
+param iteraciones symbolic;
+param byb symbolic;
+printf "\n\nmodeloFlujos.mod\n" >> "auxiliar1c.txt";
+print " Instancia  |  n  |  m  | Tiempo [s] | Costo | Costo (Relajado) | Iteraciones | Nodos ByB" >> "auxiliar1c.txt";
+for {i in 1..10}
+{
+	let datos :="grafo"&i&".dat";
+	data (datos);
+	option cplex_options 'relax';
+	solve;
+	option cplex_options '';
+	let solucionRelax := peso;
+	solve;
+	let iteraciones := substr(solve_message,match(solve_message,"\n")+1,match(solve_message," MIP")-match(solve_message, "\n")-1);
+	let byb := substr(solve_message,match(solve_message,"s\n")+2,match(solve_message," branch")-match(solve_message, "s\n")-2);
+	printf "%12s|%5d|%5d|%12d|%7d|%18f|%13s|%10s\n", (datos), (n), (m), (_total_solve_system_time), (peso), (solucionRelax), (iteraciones), (byb) >> "auxiliar1c.txt";
+	reset data;
+}

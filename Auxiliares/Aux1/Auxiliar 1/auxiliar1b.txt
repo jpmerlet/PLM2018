@@ -1,0 +1,40 @@
+modeloConect.mod
+ Instancia  |  n  |  m  | Tiempo [s] | Costo | Costo (Relajado)
+  grafo1.dat|   11|   36|           0|    178|       169.500000
+  grafo2.dat|   12|   43|           0|    207|       207.000000
+  grafo3.dat|   13|   51|           0|    290|       285.333333
+  grafo4.dat|   14|   65|           1|    284|       249.000000
+  grafo5.dat|   15|   70|           1|    244|       244.000000
+  grafo6.dat|   16|   75|           3|    240|       237.000000
+  grafo7.dat|   17|   93|           6|    272|       269.250000
+  grafo8.dat|   18|  110|          13|    250|       243.500000
+  grafo9.dat|   19|  123|          26|    188|       187.500000
+ grafo10.dat|   20|  139|          74|    209|       191.500000
+
+
+modeloCiclos.mod
+ Instancia  |  n  |  m  | Tiempo [s] | Costo | Costo (Relajado)
+  grafo1.dat|   11|   36|           0|    178|       178.000000
+  grafo2.dat|   12|   43|           0|    207|       207.000000
+  grafo3.dat|   13|   51|           0|    290|       290.000000
+  grafo4.dat|   14|   65|           0|    284|       284.000000
+  grafo5.dat|   15|   70|           0|    244|       244.000000
+  grafo6.dat|   16|   75|           0|    240|       240.000000
+  grafo7.dat|   17|   93|           2|    272|       272.000000
+  grafo8.dat|   18|  110|           4|    250|       250.000000
+  grafo9.dat|   19|  123|           9|    188|       188.000000
+ grafo10.dat|   20|  139|          21|    209|       209.000000
+
+
+modeloFlujos.mod
+ Instancia  |  n  |  m  | Tiempo [s] | Costo | Costo (Relajado)
+  grafo1.dat|   11|   36|           0|    178|        48.300000
+  grafo2.dat|   12|   43|           0|    207|        72.545455
+  grafo3.dat|   13|   51|           0|    290|       104.250000
+  grafo4.dat|   14|   65|           0|    284|        47.153846
+  grafo5.dat|   15|   70|           0|    244|        71.857143
+  grafo6.dat|   16|   75|           0|    240|        90.733333
+  grafo7.dat|   17|   93|           0|    272|        47.000000
+  grafo8.dat|   18|  110|           0|    250|        48.705882
+  grafo9.dat|   19|  123|           0|    188|        41.888889
+ grafo10.dat|   20|  139|           0|    209|        57.105263

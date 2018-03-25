@@ -1,0 +1,57 @@
+reset;
+option solver cplex;
+model modeloConect.mod;
+param datos symbolic;
+param solucionRelax;
+
+print "modeloConect.mod"> "auxiliar1b.txt";
+print " Instancia  |  n  |  m  | Tiempo [s] | Costo | Costo (Relajado)" >> "auxiliar1b.txt";
+for {i in 1..10}
+{
+	let datos :="grafo"&i&".dat";
+	data (datos);
+	option cplex_options 'relax';
+	solve;
+	option cplex_options '';
+	let solucionRelax := peso;
+	solve;
+	printf "%12s|%5d|%5d|%12d|%7d|%17f\n", (datos), (n), (m), (_total_solve_system_time), (peso), (solucionRelax) >> "auxiliar1b.txt";
+	reset data;
+}
+
+reset;
+model modeloCiclos.mod;
+param datos symbolic;
+param solucionRelax;
+printf "\n\nmodeloCiclos.mod\n" >> "auxiliar1b.txt";
+print " Instancia  |  n  |  m  | Tiempo [s] | Costo | Costo (Relajado)" >> "auxiliar1b.txt";
+for {i in 1..10}
+{
+	let datos :="grafo"&i&".dat";
+	data (datos);
+	option cplex_options 'relax';
+	solve;
+	option cplex_options '';
+	let solucionRelax := peso;
+	solve;
+	printf "%12s|%5d|%5d|%12d|%7d|%17f\n", (datos), (n), (m), (_total_solve_system_time), (peso), (solucionRelax) >> "auxiliar1b.txt";
+	reset data;
+}
+reset;
+model modeloFlujos.mod;
+param datos symbolic;
+param solucionRelax;
+printf "\n\nmodeloFlujos.mod\n" >> "auxiliar1b.txt";
+print " Instancia  |  n  |  m  | Tiempo [s] | Costo | Costo (Relajado)" >> "auxiliar1b.txt";
+for {i in 1..10}
+{
+	let datos :="grafo"&i&".dat";
+	data (datos);
+	option cplex_options 'relax';
+	solve;
+	option cplex_options '';
+	let solucionRelax := peso;
+	solve;
+	printf "%12s|%5d|%5d|%12d|%7d|%17f\n", (datos), (n), (m), (_total_solve_system_time), (peso), (solucionRelax) >> "auxiliar1b.txt";
+	reset data;
+}
