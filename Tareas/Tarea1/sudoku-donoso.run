@@ -9,36 +9,8 @@ param input_file symbolic;
 param output_file symbolic;
 param es_factible symbolic;
 
-#read n, {(i,j) in {1..N} cross {1..N}} Q[i,j] <sudoku-01.txt;close sudoku-01.txt;
-#solve;
-
-#for {(i,j,k) in 1..N cross 1..N cross 1..N}
-#{
-#	if x[i,j,k]==1 then
-#	{
-#		let Q[i,j]:=k;
-#	}
-#}
-
-#display Q, solve_result_num;
-#reset data n;
-#reset data Q;
-
-#read n, {(i,j) in {1..N} cross {1..N}} Q[i,j] <sudoku-03.txt;close sudoku-03.txt;
-#solve;
-
-#for {(i,j,k) in 1..N cross 1..N cross 1..N}
-#{
-#	if x[i,j,k]==1 then
-#	{
-#		let Q[i,j]:=k;
-#	}
-#}
-	
-#display Q,solve_result_num;
-
-printf "Sudoku\nAutor: Juan Pablo Donoso Merlet\n\nInstancia      - N    - factible?  - tiempo\n" > sudoku-reporte.txt;
-for {num_archivo in {1..20}}
+printf "Sudoku\nAutor: Juan Pablo Donoso Merlet\n\nInstancia      -  N    - factible?  - tiempo\n" > sudoku-reporte.txt;
+for {num_archivo in {1..19}}
 {
 	reset data n,Q;
 	if num_archivo<10 then
@@ -65,7 +37,16 @@ for {num_archivo in {1..20}}
 	if solve_result_num==2 then
 	{
 		let es_factible:="si";
-		display Q > (output_file);
+		# display Q > (output_file);
+		printf "" > (output_file);
+		for {i in {1..N}}
+		{
+			for {j in {1..N}}
+			{
+				printf "%3d ", (Q[i,j]) >> (output_file);
+			}
+			printf "\n" >> (output_file);
+		}
 	}
 	# si no, entonces escribir que es infactible
 	if solve_result_num==220 then
@@ -74,5 +55,5 @@ for {num_archivo in {1..20}}
 		print "infactible" > (output_file);
 	}
 	# escribir reporte
-	printf "%12s  -%2d    - %2s         - %6f\n", (input_file),(N),(es_factible),(_total_solve_system_time) >> sudoku-reporte.txt;
+	printf "%12s  -%3d    - %2s         - %6f\n", (input_file),(N),(es_factible),(_total_solve_system_time) >> sudoku-reporte.txt;
 }
