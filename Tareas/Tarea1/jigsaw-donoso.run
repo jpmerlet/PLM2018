@@ -1,3 +1,4 @@
+## Archivo (jigsaw-donoso.run) ##
 reset;
 
 model jigsaw-donoso.mod;
@@ -5,19 +6,58 @@ model jigsaw-donoso.mod;
 option presolve 0;
 option solver cplex;
 option display_1col 0;
-param input_file symbolic;
-param output_file symbolic;
+param input_file symbolic; # parametro que guarda nombre de los archivos de entrada
+param output_file symbolic; # lo mismo para el archivo de salida
 param es_factible symbolic;
 
-read N, {(i,j) in {1..N} cross {1..N}} Q[i,j], {(i,j) in {1..N} cross {1..N}} B[i,j] < jigsaw-01.txt;close jigsaw-01.txt;
+printf "Jigsaw\nAutor: Juan Pablo Donoso Merlet\n\nInstancia      -  N    - factible?  - tiempo\n" > jigsaw-reporte.txt;
 
-solve;
-
-for {(i,j,k) in 1..N cross 1..N cross 1..N}
+for {num_archivo in {1..10}}
 {
-	if x[i,j,k]==1 then
+	reset data N, Q, B;
+	# recupera el nombre del archivo a leer y escribir (separar en casos para saber cuando agregar el cero)	
+	if num_archivo<10 then
 	{
-		let Q[i,j]:=k;
+		let input_file:= 'jigsaw-0'& num_archivo &'.txt';
+		let output_file:= 'jigsaw-'&'donoso'&'-0'& num_archivo &'.txt';
 	}
+	else
+	{
+		let input_file:= 'jigsaw-'& num_archivo &'.txt';
+		let output_file:= 'jigsaw-'&'donoso'&'-'& num_archivo &'.txt';
+	}
+	read N, {(i,j) in {1..N} cross {1..N}} Q[i,j], {(i,j) in {1..N} cross {1..N}} B[i,j] < (input_file);close input_file;
+	solve;
+	for {(i,j,k) in 1..N cross 1..N cross 1..N}
+	{
+		if x[i,j,k]==1 then
+		{
+			let Q[i,j]:=k;
+		}
+	}
+	display Q;
+	
+	# escribir matriz resultante en caso de que haya solucion
+	if solve_result_num==2 then
+	{
+		let es_factible:="si";
+		# display Q > (output_file);
+		printf "" > (output_file);
+		for {i in {1..N}}
+		{
+			for {j in {1..N}}
+			{
+				printf "%3d ", (Q[i,j]) >> (output_file);
+			}
+			printf "\n" >> (output_file);
+		}
+	}
+	# si no, entonces escribir que es infactible
+	if solve_result_num==220 then
+	{
+		let es_factible:="no";
+		print "infactible" > (output_file);
+	}
+	# escribir reporte
+	printf "%12s  -%3d    - %2s         - %6f\n", (input_file),(N),(es_factible),(_total_solve_system_time) >> jigsaw-reporte.txt;
 }
-display Q;

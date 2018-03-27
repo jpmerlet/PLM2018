@@ -1,0 +1,14 @@
+Jigsaw
+Autor: Juan Pablo Donoso Merlet
+
+Instancia      -  N    - factible?  - tiempo
+jigsaw-01.txt  - 12    - si         - 0.004144
+jigsaw-02.txt  -  6    - si         - 0.007021
+jigsaw-03.txt  -  9    - si         - 0.010377
+jigsaw-04.txt  -  9    - si         - 0.013653
+jigsaw-05.txt  -  9    - si         - 0.018350
+jigsaw-06.txt  - 15    - si         - 0.134388
+jigsaw-07.txt  - 15    - no         - 0.140157
+jigsaw-08.txt  -  9    - si         - 0.144586
+jigsaw-09.txt  - 21    - si         - 0.186026
+jigsaw-10.txt  -  4    - no         - 0.189017

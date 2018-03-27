@@ -2,22 +2,22 @@ Sudoku
 Autor: Juan Pablo Donoso Merlet
 
 Instancia      -  N    - factible?  - tiempo
-sudoku-01.txt  -  9    - si         - 0.003455
-sudoku-02.txt  -  4    - no         - 0.007001
-sudoku-03.txt  -  9    - si         - 0.011047
-sudoku-04.txt  - 16    - si         - 0.016686
-sudoku-05.txt  -  9    - no         - 0.019464
-sudoku-06.txt  - 16    - si         - 0.025698
-sudoku-07.txt  - 16    - si         - 0.031486
-sudoku-08.txt  -  4    - si         - 0.034173
-sudoku-09.txt  -  9    - si         - 0.038067
-sudoku-10.txt  - 16    - si         - 0.043594
-sudoku-11.txt  - 25    - si         - 0.057778
-sudoku-12.txt  - 25    - si         - 0.071389
-sudoku-13.txt  - 25    - no         - 0.080134
-sudoku-14.txt  - 25    - si         - 0.097597
-sudoku-15.txt  - 36    - si         - 0.142751
-sudoku-16.txt  - 49    - si         - 0.226351
-sudoku-17.txt  - 64    - si         - 0.410044
-sudoku-18.txt  - 81    - si         - 0.779331
-sudoku-19.txt  -100    - si         - 1.804605
+sudoku-01.txt  -  9    - si         - 0.003553
+sudoku-02.txt  -  4    - no         - 0.006164
+sudoku-03.txt  -  9    - si         - 0.010026
+sudoku-04.txt  - 16    - si         - 0.015240
+sudoku-05.txt  -  9    - no         - 0.018076
+sudoku-06.txt  - 16    - si         - 0.024470
+sudoku-07.txt  - 16    - si         - 0.029480
+sudoku-08.txt  -  4    - si         - 0.032313
+sudoku-09.txt  -  9    - si         - 0.035691
+sudoku-10.txt  - 16    - si         - 0.041645
+sudoku-11.txt  - 25    - si         - 0.053591
+sudoku-12.txt  - 25    - si         - 0.067737
+sudoku-13.txt  - 25    - no         - 0.078025
+sudoku-14.txt  - 25    - si         - 0.091707
+sudoku-15.txt  - 36    - si         - 0.136400
+sudoku-16.txt  - 49    - si         - 0.217086
+sudoku-17.txt  - 64    - si         - 0.400800
+sudoku-18.txt  - 81    - si         - 0.790802
+sudoku-19.txt  -100    - si         - 1.825939

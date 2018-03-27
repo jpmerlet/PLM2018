@@ -1,3 +1,4 @@
+## Archivo (sudoku-donoso.run) ##
 reset;
 # se carga el modelo
 model sudoku-donoso.mod;
@@ -13,6 +14,7 @@ printf "Sudoku\nAutor: Juan Pablo Donoso Merlet\n\nInstancia      -  N    - fact
 for {num_archivo in {1..19}}
 {
 	reset data n,Q;
+	# recupera el nombre del archivo a leer y escribir (separar en casos para saber cuando agregar el cero)
 	if num_archivo<10 then
 	{
 		let input_file:= 'sudoku-0'& num_archivo &'.txt';
@@ -25,6 +27,7 @@ for {num_archivo in {1..19}}
 	}
 	read n, {(i,j) in {1..N} cross {1..N}} Q[i,j] < (input_file);close input_file;
 	solve;
+	# reemplazar en la matriz Q la solucion encontrada
 	for {(i,j,k) in 1..N cross 1..N cross 1..N}
 	{
 		if x[i,j,k]==1 then
@@ -37,7 +40,6 @@ for {num_archivo in {1..19}}
 	if solve_result_num==2 then
 	{
 		let es_factible:="si";
-		# display Q > (output_file);
 		printf "" > (output_file);
 		for {i in {1..N}}
 		{

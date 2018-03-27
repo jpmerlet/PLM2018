@@ -4,15 +4,14 @@ param N:=n*n;
 param Q {1..N, 1..N}; #datos prescritos
 
 # definicion de conjuntos y variables
-set indices:= {1..N} cross {1..N} cross {1..N};
+set indices:= {1..N} cross {1..N} cross {1..N}; # estos corresponden a los indices de la variable
 set indices_cuadrantes:= {0..n-1} cross {0..n-1};
-# set cuadrantes {(i,j) in {0..n-1} cross {0..n-1}}:= {(n*i+a,n*j+b):};
-set cuadrantes {(i,j) in {0..n-1} cross {0..n-1}}:=union {a in {1..n},b in {1..n}} {(n*i+a,n*j+b)};
+set cuadrantes {(i,j) in indices_cuadrantes}:=union {a in {1..n},b in {1..n}} {(n*i+a,n*j+b)};
 set tabla:= {(i,j,k) in indices: Q[i,j] = k};
 var x {indices} binary;
 
-# restricciones para que una casilla haya solo un numero
-subject to M {(i,j) in {1..N} cross {1..N}} : sum {k in {1..N}} x[i,j,k] = 1;
+# restricciones para que en una casilla haya solo un numero
+subject to unicidad {(i,j) in {1..N} cross {1..N}} : sum {k in {1..N}} x[i,j,k] = 1;
 
 # restricciones para las filas
 subject to fila {(i,k) in {1..N} cross {1..N}} : sum {j in {1..N}} x[i,j,k] = 1;
