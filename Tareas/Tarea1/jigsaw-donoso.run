@@ -1,0 +1,23 @@
+reset;
+
+model jigsaw-donoso.mod;
+
+option presolve 0;
+option solver cplex;
+option display_1col 0;
+param input_file symbolic;
+param output_file symbolic;
+param es_factible symbolic;
+
+read N, {(i,j) in {1..N} cross {1..N}} Q[i,j], {(i,j) in {1..N} cross {1..N}} B[i,j] < jigsaw-01.txt;close jigsaw-01.txt;
+
+solve;
+
+for {(i,j,k) in 1..N cross 1..N cross 1..N}
+{
+	if x[i,j,k]==1 then
+	{
+		let Q[i,j]:=k;
+	}
+}
+display Q;

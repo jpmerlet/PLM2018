@@ -6,13 +6,11 @@ param B {1..N,1..N}; # datos zonas cuadrantes
 # definicion de variables y conjuntos
 set indices:= {1..N} cross {1..N} cross {1..N};
 set tabla:= {(i,j,k) in indices: Q[i,j] = k};
-set Cuadrantes {K in {1..N}}:= {(i,j) in {1..N} cross {1..N}: B[i,j]=k}
+set Cuadrantes {K in {1..N}}:= {(i,j) in {1..N} cross {1..N}: B[i,j]=K};
 var x {indices} binary;
 
-
-
 # restricciones para que cada casilla tenga solo un numero
-subject to M {(i,j) in {1..N} cross {1..N}}: sum {k in {1..N}} = 1;
+subject to M {(i,j) in {1..N} cross {1..N}}: sum {k in {1..N}} x[i,j,k] = 1;
 
 # restricciones para las filas
 subject to fila {(i,k) in {1..N} cross {1..N}} : sum {j in {1..N}} x[i,j,k] = 1;
