@@ -1,0 +1,17 @@
+reset;
+param n;
+param M {1..n,1..n};
+param M_permut {1..n,1..n};
+param pi {1..n};
+
+read n, {(i,j) in {1..n,1..n}} M[i,j], {i in {1..n}} pi[i] < 'matriz1.txt';
+
+# permutar matriz
+
+for {j in {1..n}}
+{
+	for {i in {1..n}}
+	{
+		let M_permut[i,j]:= M[i,pi[j]];
+	}
+}

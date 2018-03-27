@@ -1,0 +1,5 @@
+reset;
+model P2b.mod;
+data  "S1.dat";
+#solve;
+#display u,v; 
