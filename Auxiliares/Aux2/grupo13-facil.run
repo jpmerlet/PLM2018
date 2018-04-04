@@ -1,0 +1,5 @@
+reset;
+
+model grupo-facil.mod;
+
+read N, num_jaulas, {(i,j) in {1..N} cross {1..N}} B[i,j], {(i,j) in {1..num_jaulas} cross {1..2}} declaracion[i,j]<;close;
