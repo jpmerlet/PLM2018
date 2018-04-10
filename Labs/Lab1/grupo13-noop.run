@@ -1,0 +1,83 @@
+## Archivo (grupo13-noop.run) Entregado por grupo 13: Pablo Araya - Juan Pablo Donoso ##
+reset;
+
+## Cargamos el modelo 
+model grupo13-noop.mod;
+
+## Cambiamos el solver a cplex 
+
+option solver cplex;
+option display_1col 0;
+option display_width 300;
+
+## Parametros para poder escribir las soluciones en archivos iteradamente
+# param M {1..N,1..N};
+param Sol;
+param noop symbolic;
+param Instancia symbolic;
+param tiempo1; 
+param tiempo2;
+
+## Titulo grupo13-noop-reporte.txt
+
+print "##Archivo grupo13-noop-reporte.txt. Entregado por: Pablo Araya - Juan Pablo Donoso ##"> "grupo13-noop-reporte.txt";
+printf "\n \n" >> "grupo13-noop-reporte.txt";
+
+## Iteraciones
+
+for {p in {1..8}}
+{
+	let noop:= "noop-0"&p&".txt";
+	print "noop-0"&p&".txt";
+
+	## Leer archivos
+	read N, num_jaulas, {(i,j) in {1..N}cross{1..N}} B[i,j], {j in {1..num_jaulas}} objetivo[j]  < (noop);
+	close noop;
+	let M:= 1000000;
+	solve;
+
+	## Escribir la solucion en forma de matriz 
+	if solve_result_num==2 then{
+		for {i in 1..N, j in 1..N, k in 1..N}
+		{
+			## A la matriz Q en la posicion i,j le agregamos el valor k cuando x[i,j,k] > 0 ##
+			if x[i,j,k] > 0 then let Q[i,j] := k;
+		}
+	}
+
+	## Reporte de cada kendoku en archivo grupo13-noop-reporte.txt
+	printf "Instancia:" >> "grupo13-noop-reporte.txt" ;
+	let Instancia := " noop-0"&p&".txt";
+	printf (Instancia) >> "grupo13-noop-reporte.txt";
+
+	printf "\n" >> "grupo13-noop-reporte.txt";
+
+	printf "Tiempo de resolucion:" >> "grupo13-noop-reporte.txt";
+	let tiempo1 := _total_solve_system_time;
+	let tiempo2 := _ampl_time;
+	printf "%10f", (tiempo1) >> "grupo13-noop-reporte.txt";
+	printf "%10f" , (tiempo2) >> "grupo13-noop-reporte.txt";
+
+	printf "\n" >> "grupo13-noop-reporte.txt";
+
+	printf " Solucion:" >> "grupo13-noop-reporte.txt";
+	printf "\n">> "grupo13-noop-reporte.txt";
+
+	if solve_result_num==2 then{
+		for{i in {1..N}}
+		{
+
+			for {j in {1..N}}
+			{
+				printf "%3d", (Q[i,j]) >> "grupo13-noop-reporte.txt";
+			}
+			printf "\n" >> "grupo13-noop-reporte.txt";
+		}
+	}
+	if solve_result_num==220 then{
+		printf "infactible\n" >> "grupo13-noop-reporte.txt";
+		printf "\n" >> "grupo13-noop-reporte.txt";
+	}
+	printf "\n" >> "grupo13-noop-reporte.txt";
+	reset data N, num_jaulas,B,objetivo,M,Q;
+}
