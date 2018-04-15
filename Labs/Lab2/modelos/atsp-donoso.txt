@@ -1,0 +1,12 @@
+## Archivo atsp-donoso.txt ##
+Instancia test1.dat
+## Archivo atsp-donoso.txt ##
+Instancia test1.dat
+modelo DFJ
+LP: 39.000000 IP: 39.000000 INT-GAP: 0.000000 % RES-GAP: 0.000000 tiempo-ampl: 5.224177 tiempo-solver: 0.492700
+modelo MTZ
+LP: 2.250000 IP: 39.000000 INT-GAP: 94.230769 % RES-GAP: 0.000000 tiempo-ampl: 9.905861 tiempo-solver: 0.095194
+modelo WONG
+LP: 39.000000 IP: 39.000000 INT-GAP: 0.000000 % RES-GAP: 0.000000 tiempo-ampl: 10.019885 tiempo-solver: 0.336219
+## Archivo atsp-donoso.txt ##
+Instancia test1.dat
