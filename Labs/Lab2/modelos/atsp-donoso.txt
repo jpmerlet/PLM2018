@@ -1,12 +1,24 @@
 ## Archivo atsp-donoso.txt ##
 Instancia test1.dat
-## Archivo atsp-donoso.txt ##
-Instancia test1.dat
 modelo DFJ
-LP: 39.000000 IP: 39.000000 INT-GAP: 0.000000 % RES-GAP: 0.000000 tiempo-ampl: 5.224177 tiempo-solver: 0.492700
+LP: 39.000000 IP: 39.000000 INT-GAP: 0.000000 % RES-GAP: 0.000000 tiempo-ampl: 5.694799 tiempo-solver: 0.813703
 modelo MTZ
-LP: 2.250000 IP: 39.000000 INT-GAP: 94.230769 % RES-GAP: 0.000000 tiempo-ampl: 9.905861 tiempo-solver: 0.095194
+LP: 2.250000 IP: 39.000000 INT-GAP: 94.230769 % RES-GAP: 0.000000 tiempo-ampl: 13.096541 tiempo-solver: 0.161589
 modelo WONG
-LP: 39.000000 IP: 39.000000 INT-GAP: 0.000000 % RES-GAP: 0.000000 tiempo-ampl: 10.019885 tiempo-solver: 0.336219
-## Archivo atsp-donoso.txt ##
-Instancia test1.dat
+LP: 39.000000 IP: 39.000000 INT-GAP: 0.000000 % RES-GAP: 0.000000 tiempo-ampl: 13.255588 tiempo-solver: 2.691064
+
+Instancia test2.dat
+modelo DFJ
+AMPL no pudo resolver esta instancia.
+modelo MTZ
+LP: 835.480000 IP: 937.000000 INT-GAP: 10.834578 % RES-GAP: 0.000000 tiempo-ampl: 17.571458 tiempo-solver: 7.475881
+modelo WONG
+LP: 937.000000 IP: 937.000000 INT-GAP: 0.000000 % RES-GAP: 0.000000 tiempo-ampl: 18.127202 tiempo-solver: 0.235167
+
+Instancia test3.dat
+modelo DFJ
+AMPL no pudo resolver esta instancia.
+modelo MTZ
+LP: 535.658537 IP: 2448.000000 INT-GAP: 78.118524 % RES-GAP: 0.766111 tiempo-ampl: 28.500525 tiempo-solver: 22.121974
+modelo WONG
+LP: 697.000000 IP: 535.658537 INT-GAP: -30.120208 % RES-GAP: Infinity tiempo-ampl: 30.336933 tiempo-solver: 6.310317

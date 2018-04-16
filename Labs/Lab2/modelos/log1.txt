@@ -1,2 +1,2 @@
-CPLEX 12.8.0.0: optimal solution; objective 39
-5726 dual simplex iterations (0 in phase I)
+CPLEX 12.8.0.0: optimal solution; objective 697
+154012 dual simplex iterations (19 in phase I)

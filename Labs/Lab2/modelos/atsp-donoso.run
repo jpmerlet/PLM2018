@@ -7,7 +7,7 @@ option cplex_options
 mipcuts=-1 splitcuts=-1 mcfcuts=-1 mipdisplay=4 cutstats=1 \
 mipinterval=1 threads=1 mipstartstatus=0 mipstartvalue=0 \
 logfile=log1.txt branch=-1 presolvenode=-1 \
-timing=15 timelimit=180 return_mipgap=7';
+timing=15 timelimit=600 return_mipgap=7';
 
 ## parametros para el reporte ##
 param tiempo_ampl; 
@@ -73,9 +73,6 @@ data "test1.dat";
 
 problem DFJmodel;
 
-print "## Archivo atsp-donoso.txt ##"> "atsp-donoso.txt";
-print "Instancia test1.dat" >> "atsp-donoso.txt";
-
 # resolver problema entero
 option DFJmodel.relax_integrality 0; solve;
 let IP:= LargoTour;
@@ -132,7 +129,7 @@ let LP:= LargoTour;
 let INT_GAP:= (IP-LP)/IP*100;
 
 print "modelo WONG" >> "atsp-donoso.txt";
-printf "LP: %4f IP: %4f INT-GAP: %4f % RES-GAP: %4f tiempo-ampl: %4f tiempo-solver: %4f\n", (LP),(IP),(INT_GAP),(RES_GAP),(tiempo_ampl),(tiempo_solver) >> "atsp-donoso.txt";
+printf "LP: %4f IP: %4f INT-GAP: %4f % RES-GAP: %4f tiempo-ampl: %4f tiempo-solver: %4f\n\n", (LP),(IP),(INT_GAP),(RES_GAP),(tiempo_ampl),(tiempo_solver) >> "atsp-donoso.txt";
 
 reset data n,c;	
 reset data LP, IP, INT_GAP, RES_GAP, tiempo_ampl, tiempo_solver;
@@ -141,38 +138,112 @@ reset data LP, IP, INT_GAP, RES_GAP, tiempo_ampl, tiempo_solver;
 ##################################################################
 data "test2.dat";
 
-problem DFJmodel;
+# problem DFJmodel;
 
-print "## Archivo atsp-donoso.txt ##"> "atsp-donoso.txt";
-print "Instancia test1.dat" >> "atsp-donoso.txt";
+printf "Instancia test2.dat\n" >> "atsp-donoso.txt";
 
-# resolver problema entero
-option DFJmodel.relax_integrality 0; 
-# option gentimes 1;
-# option times 1;
-solve;
+# # resolver problema entero
+# option DFJmodel.relax_integrality 0; solve;
+# let IP:= LargoTour;
+# let tiempo_solver := _solve_system_time;
+# let tiempo_ampl := _ampl_time;
+# let RES_GAP:= LargoTour.relmipgap;
+
+# # resolver problema relajado
+# option DFJmodel.relax_integrality 1; solve;
+# let LP:= LargoTour;
+# let INT_GAP:= (IP-LP)/IP*100;
+
+# # guardar linea con los resultados
+printf "modelo DFJ\nAMPL no pudo resolver esta instancia.\n" >> "atsp-donoso.txt";
+# printf "LP: %4f IP: %4f INT-GAP: %4f % RES-GAP: %4f tiempo-ampl: %4f tiempo-solver: %4f\n", (LP),(IP),(INT_GAP),(RES_GAP),(tiempo_ampl),(tiempo_solver) >> "atsp-donoso.txt";
+
+# # resetear datos a escribir
+# reset data IP, tiempo_solver, tiempo_ampl, LP, INT_GAP, RES_GAP;
+
+# # modelo MTZ
+ problem MTZmodel;
+
+# resolver problema entero 
+option MTZmodel.relax_integrality 0; solve;
+
 let IP:= LargoTour;
 let tiempo_solver := _solve_system_time;
 let tiempo_ampl := _ampl_time;
 let RES_GAP:= LargoTour.relmipgap;
 
 # resolver problema relajado
-option DFJmodel.relax_integrality 1; solve;
+option MTZmodel.relax_integrality 1;solve;
+
 let LP:= LargoTour;
 let INT_GAP:= (IP-LP)/IP*100;
 
-# guardar linea con los resultados
-print "modelo DFJ" >> "atsp-donoso.txt";
+print "modelo MTZ" >> "atsp-donoso.txt";
 printf "LP: %4f IP: %4f INT-GAP: %4f % RES-GAP: %4f tiempo-ampl: %4f tiempo-solver: %4f\n", (LP),(IP),(INT_GAP),(RES_GAP),(tiempo_ampl),(tiempo_solver) >> "atsp-donoso.txt";
 
 # resetear datos a escribir
-reset data IP, tiempo_solver, tiempo_ampl, LP, INT_GAP, RES_GAP;
+reset data LP, IP, INT_GAP, RES_GAP, tiempo_ampl, tiempo_solver;
+
+# # modelo WONG
+problem WONGmodel;
+
+# resolver problema entero 
+option WONGmodel.relax_integrality 0; 
+solve;
+
+let IP:= LargoTour;
+let tiempo_solver := _solve_system_time;
+let tiempo_ampl := _ampl_time;
+let RES_GAP:= LargoTour.relmipgap;
+
+# resolver problema relajado
+option WONGmodel.relax_integrality 1; solve;
+let LP:= LargoTour;
+let INT_GAP:= (IP-LP)/IP*100;
+
+print "modelo WONG" >> "atsp-donoso.txt";
+printf "LP: %4f IP: %4f INT-GAP: %4f % RES-GAP: %4f tiempo-ampl: %4f tiempo-solver: %4f\n\n", (LP),(IP),(INT_GAP),(RES_GAP),(tiempo_ampl),(tiempo_solver) >> "atsp-donoso.txt";
+
+reset data n,c;	
+reset data LP, IP, INT_GAP, RES_GAP, tiempo_ampl, tiempo_solver;
+# ##################################################################
+# ############ Se resuelve para la tercera instancia ###############
+# ##################################################################
+
+data "test3.dat";
+# problem DFJmodel;
+
+print "Instancia test3.dat" >> "atsp-donoso.txt";
+
+# # resolver problema entero
+# option DFJmodel.relax_integrality 0; 
+# option gentimes 1;
+# option times 1;
+# solve;
+
+# let IP:= LargoTour;
+# let tiempo_solver := _solve_system_time;
+# let tiempo_ampl := _ampl_time;
+# let RES_GAP:= LargoTour.relmipgap;
+
+# # resolver problema relajado
+# option DFJmodel.relax_integrality 1; solve;
+# let LP:= LargoTour;
+# let INT_GAP:= (IP-LP)/IP*100;
+
+# # guardar linea con los resultados
+# print "modelo DFJ" >> "atsp-donoso.txt";
+# printf "LP: %4f IP: %4f INT-GAP: %4f % RES-GAP: %4f tiempo-ampl: %4f tiempo-solver: %4f\n", (LP),(IP),(INT_GAP),(RES_GAP),(tiempo_ampl),(tiempo_solver) >> "atsp-donoso.txt";
+printf "modelo DFJ\nAMPL no pudo resolver esta instancia.\n" >> "atsp-donoso.txt";
+# resetear datos a escribir
+# reset data IP, tiempo_solver, tiempo_ampl, LP, INT_GAP, RES_GAP;
 
 # modelo MTZ
 problem MTZmodel;
 
 # resolver problema entero 
 option MTZmodel.relax_integrality 0; solve;
+
 let IP:= LargoTour;
 let tiempo_solver := _solve_system_time;
 let tiempo_ampl := _ampl_time;
@@ -194,6 +265,7 @@ problem WONGmodel;
 
 # resolver problema entero 
 option WONGmodel.relax_integrality 0; solve;
+
 let IP:= LargoTour;
 let tiempo_solver := _solve_system_time;
 let tiempo_ampl := _ampl_time;
@@ -206,73 +278,3 @@ let INT_GAP:= (IP-LP)/IP*100;
 
 print "modelo WONG" >> "atsp-donoso.txt";
 printf "LP: %4f IP: %4f INT-GAP: %4f % RES-GAP: %4f tiempo-ampl: %4f tiempo-solver: %4f\n", (LP),(IP),(INT_GAP),(RES_GAP),(tiempo_ampl),(tiempo_solver) >> "atsp-donoso.txt";
-
-reset data n,c;	
-reset data LP, IP, INT_GAP, RES_GAP, tiempo_ampl, tiempo_solver;
-# ##################################################################
-# ############ Se resuelve para la tercera instancia ###############
-# ##################################################################
-
-# data "test3.dat";
-# problem DFJmodel;
-
-# print "## Archivo atsp-donoso.txt ##"> "atsp-donoso.txt";
-# print "Instancia test1.dat" >> "atsp-donoso.txt";
-
-# # resolver problema entero
-# option DFJmodel.relax_integrality 0; solve;
-# let IP:= LargoTour;
-# let tiempo_solver := _solve_system_time;
-# let tiempo_ampl := _ampl_time;
-# let RES_GAP:= LargoTour.relmipgap;
-
-# # resolver problema relajado
-# option DFJmodel.relax_integrality 1; solve;
-# let LP:= LargoTour;
-# let INT_GAP:= (IP-LP)/IP*100;
-
-# # guardar linea con los resultados
-# print "modelo DFJ" >> "atsp-donoso.txt";
-# printf "LP: %4f IP: %4f INT-GAP: %4f % RES-GAP: %4f tiempo-ampl: %4f tiempo-solver: %4f\n", (LP),(IP),(INT_GAP),(RES_GAP),(tiempo_ampl),(tiempo_solver) >> "atsp-donoso.txt";
-
-# # resetear datos a escribir
-# reset data IP, tiempo_solver, tiempo_ampl, LP, INT_GAP, RES_GAP;
-
-# # modelo MTZ
-# problem MTZmodel;
-
-# # resolver problema entero 
-# option MTZmodel.relax_integrality 0; solve;
-# let IP:= LargoTour;
-# let tiempo_solver := _solve_system_time;
-# let tiempo_ampl := _ampl_time;
-# let RES_GAP:= LargoTour.relmipgap;
-
-# # resolver problema relajado
-# option MTZmodel.relax_integrality 1; solve;
-# let LP:= LargoTour;
-# let INT_GAP:= (IP-LP)/IP*100;
-
-# print "modelo MTZ" >> "atsp-donoso.txt";
-# printf "LP: %4f IP: %4f INT-GAP: %4f % RES-GAP: %4f tiempo-ampl: %4f tiempo-solver: %4f\n", (LP),(IP),(INT_GAP),(RES_GAP),(tiempo_ampl),(tiempo_solver) >> "atsp-donoso.txt";
-
-# # resetear datos a escribir
-# reset data LP, IP, INT_GAP, RES_GAP, tiempo_ampl, tiempo_solver;
-
-# # modelo WONG
-# problem WONGmodel;
-
-# # resolver problema entero 
-# option WONGmodel.relax_integrality 0; solve;
-# let IP:= LargoTour;
-# let tiempo_solver := _solve_system_time;
-# let tiempo_ampl := _ampl_time;
-# let RES_GAP:= LargoTour.relmipgap;
-
-# # resolver problema relajado
-# option WONGmodel.relax_integrality 1; solve;
-# let LP:= LargoTour;
-# let INT_GAP:= (IP-LP)/IP*100;
-
-# print "modelo WONG" >> "atsp-donoso.txt";
-# printf "LP: %4f IP: %4f INT-GAP: %4f % RES-GAP: %4f tiempo-ampl: %4f tiempo-solver: %4f\n", (LP),(IP),(INT_GAP),(RES_GAP),(tiempo_ampl),(tiempo_solver) >> "atsp-donoso.txt";
