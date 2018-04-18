@@ -1,0 +1,4 @@
+reset;
+
+model P1.mod;
+data GRAFO_5.dat;
