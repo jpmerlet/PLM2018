@@ -19,7 +19,7 @@ subject to subTourDFJ {k in INDICES: card(CONJUNTO[k])>=2 and card(CONJUNTO[k])<
 set INDICES_u := 2..n; 
 var u {INDICES_u} >=1;
 subject to UperBound {i in INDICES_u}: u[i] <= n-1;
-subject to subTourMTZ {(i,j) in E: i<>1 and j<>1}: u[i] - u[j] + 1 + (n-1)*x[i,j]<= n-1; 
+subject to subTourMTZ {(i,j) in E: i<>1 and j<>1}: u[i] - u[j] + (n-1)*x[i,j]<= n-2; 
 
 ## modelo Wong ##
 var f {(i,j,k) in E cross {2..n}} >= 0;

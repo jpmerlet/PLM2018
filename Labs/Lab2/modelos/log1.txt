@@ -1,2 +1,21 @@
-CPLEX 12.8.0.0: optimal solution; objective 697
-154012 dual simplex iterations (19 in phase I)
+Clique table members: 84.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 294.40 sec. (67003.95 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+      0     0      697.0000    94                    697.0000   139454         
+
+Root node processing (before b&c):
+  Real time             =  300.03 sec. (68299.05 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =  300.03 sec. (68299.05 ticks)
+CPLEX 12.8.0.0: time limit with no integer solution.
+139454 MIP simplex iterations
+0 branch-and-bound nodes
+No basis.

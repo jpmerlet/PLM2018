@@ -1,0 +1,122 @@
+## Archivo atsp-donoso.run ##
+reset;
+## Seleccionar solvers y opciones
+## Notar que timelimit se cambio a 300 (5 min)
+option solver cplex;
+option cplex_options
+'presolve=0 probe=-1 mipsearch=1 heuristicfreq=-1 mipalg=2 \
+mipcuts=-1 splitcuts=-1 mcfcuts=-1 mipdisplay=4 cutstats=1 \
+mipinterval=1 threads=1 mipstartstatus=0 mipstartvalue=0 \
+logfile=log1.txt branch=-1 presolvenode=-1 \
+timing=15 timelimit=300 return_mipgap=7';
+
+## parametros para el reporte ##
+param tiempo_ampl; 
+param tiempo_solver;
+param IP;
+param LP;
+param INT_GAP;
+param RES_GAP;
+param input_file symbolic; # nombre del archivo input 
+param nombre_mod symbolic;
+
+## cargar modelo ##
+model atsp-donoso.mod;
+
+## Escribit reporte
+printf "## Archivo atsp-donoso.txt ##\n\n"> "atsp-donoso.txt";
+
+suffix relmipgap OUT;
+for {num_instancia in {1..3}}{
+	let input_file:= "test"&num_instancia&".dat";
+	printf "Instancia %8s\n",(input_file) > "atsp-donoso.txt";
+	
+	## cargar datos
+	data (input_file);
+
+	## Para el modelo DFJ, salta instancias 2 y 3 manualmente
+	if num_instancia == 1 then {
+		## cargar DFJ
+		problem DFJmodel;
+
+		## resolver problema entero
+		option DFJmodel.relax_integrality 0; solve;
+		if solve_result=='limit' then{
+			printf "modelo DFJ\nAMPL no pudo resolver esta instancia.\n" >> "atsp-donoso.txt";
+		}
+		else {
+			## recuperar variables problema relajado
+			let IP:= LargoTour;
+			let tiempo_solver := _solve_system_time;
+			let tiempo_ampl := _ampl_time;
+			let RES_GAP:= LargoTour.relmipgap;
+			
+			option DFJmodel.relax_integrality 1; solve;
+			let LP:= LargoTour;
+			let INT_GAP:= (IP-LP)/IP*100;
+
+			## guardar linea con los resultados
+			print "modelo DFJ" >> "atsp-donoso.txt";
+			printf "LP: %4f IP: %4f INT-GAP: %4f % RES-GAP: %4f tiempo-ampl: %4f tiempo-solver: %4f\n", (LP),(IP),(INT_GAP),(RES_GAP),(tiempo_ampl),(tiempo_solver) >> "atsp-donoso.txt";
+		}
+	}
+	else {
+		printf "modelo DFJ\nAMPL no pudo resolver esta instancia.\n" >> "atsp-donoso.txt";
+	}
+	
+	## resetear datos a escribir
+	reset data IP, tiempo_solver, tiempo_ampl, LP, INT_GAP, RES_GAP;
+
+	## cargar MTZ
+	problem MTZmodel;
+
+	## resolver problema entero
+	option MTZmodel.relax_integrality 0; solve;
+
+	# Para MTZ (y tambien para WONG), preguntar si problema entero no termino a tiempo
+	if solve_result=='limit' then{
+		printf "modelo MTZ\nAMPL no pudo resolver esta instancia.\n" >> "atsp-donoso.txt";
+	}
+	else {
+		## recuperar variables problema relajado
+		let IP:= LargoTour;
+		let tiempo_solver := _solve_system_time;
+		let tiempo_ampl := _ampl_time;
+		let RES_GAP:= LargoTour.relmipgap;
+		
+		option MTZmodel.relax_integrality 1; solve;
+		let LP:= LargoTour;
+		let INT_GAP:= (IP-LP)/IP*100;
+
+		## guardar linea con los resultados
+		print "modelo MTZ" >> "atsp-donoso.txt";
+		printf "LP: %4f IP: %4f INT-GAP: %4f % RES-GAP: %4f tiempo-ampl: %4f tiempo-solver: %4f\n", (LP),(IP),(INT_GAP),(RES_GAP),(tiempo_ampl),(tiempo_solver) >> "atsp-donoso.txt";
+	}
+	reset data LP, IP, INT_GAP, RES_GAP, tiempo_ampl, tiempo_solver;
+	
+	## cargar WONG
+	problem WONGmodel;
+
+	## resolver problema entero
+	option WONGmodel.relax_integrality 0; solve;
+	if solve_result=='limit' then{
+		printf "modelo WONG\nAMPL no pudo resolver esta instancia.\n" >> "atsp-donoso.txt";
+	}
+	else {
+		## recuperar variables problema relajado
+		let IP:= LargoTour;
+		let tiempo_solver := _solve_system_time;
+		let tiempo_ampl := _ampl_time;
+		let RES_GAP:= LargoTour.relmipgap;
+		
+		option WONGmodel.relax_integrality 1; solve;
+		let LP:= LargoTour;
+		let INT_GAP:= (IP-LP)/IP*100;
+
+		## guardar linea con los resultados
+		print "modelo WONG" >> "atsp-donoso.txt";
+		printf "LP: %4f IP: %4f INT-GAP: %4f % RES-GAP: %4f tiempo-ampl: %4f tiempo-solver: %4f\n\n", (LP),(IP),(INT_GAP),(RES_GAP),(tiempo_ampl),(tiempo_solver) >> "atsp-donoso.txt";
+	}
+	reset data n,c;	
+	reset data LP, IP, INT_GAP, RES_GAP, tiempo_ampl, tiempo_solver;
+}
