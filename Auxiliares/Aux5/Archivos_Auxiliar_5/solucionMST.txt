@@ -1,0 +1,12 @@
+GRAFO_10.dat - 233
+GRAFO_11.dat - 110
+GRAFO_12.dat - 159
+GRAFO_13.dat - 185
+GRAFO_14.dat - 110
+GRAFO_15.dat - 244
+GRAFO_16.dat - 201
+GRAFO_17.dat - 174
+GRAFO_18.dat - 232
+GRAFO_19.dat - 187
+GRAFO_20.dat - 216
+GRAFO_21.dat - 182

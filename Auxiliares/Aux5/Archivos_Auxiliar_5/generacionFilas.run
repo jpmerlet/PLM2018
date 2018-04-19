@@ -1,0 +1,26 @@
+option solver cplex;
+reset;
+param nombre symbolic;
+model MST.mod;
+model BFS.mod;
+problem MST : x, peso, numeroElem, cortes;
+printf "" > "solucionMST.txt";
+
+for {l in 10..50}
+{
+	let m:=0;
+	let nombre := "GRAFO_"&l&".dat";
+	data (nombre);
+	solve MST;
+	include BFS.run;
+	repeat
+	{
+		let m:=m+1;
+		let S[m]:=visitados;
+		solve MST;
+		include BFS.run;
+	}
+	while (card{visitados}<n);
+	printf "%s - %d\n", (nombre), (peso) >> "solucionMST.txt";
+	reset data;
+}

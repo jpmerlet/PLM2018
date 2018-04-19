@@ -1,0 +1,14 @@
+let aristas := {(i,j) in E : x[i,j]==1};
+let visitados := {1};
+let Q := {1};
+repeat
+{
+	let u := first(Q);
+	let Q := Q diff {u};
+	for {v in V diff visitados : (u,v) in aristas or (v,u) in aristas}
+	{
+		let visitados := visitados union {v};
+		let Q := Q union {v};
+	}
+}
+while card {Q}> 0;
