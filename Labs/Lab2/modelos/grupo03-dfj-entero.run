@@ -1,0 +1,122 @@
+## Archivo (grupo03-dfj-entero.run). Entregado por Grupo (03): (Juan Donoso Camila Zarate) ##
+
+# 1. y 2.
+reset;
+
+option solver cplex;
+option solver_msg 0;
+option cplex_options 'timelimit=30'; 
+option presolve 0;
+
+param num_data:= 8;
+param datos symbolic:= "datos"&num_data&".dat";
+param nombre_reporte symbolic:= "grupo03-reporte"&num_data&".txt";
+param numerocortes_PL;
+
+# parametro para recuperar el ciclo
+param siguiente;
+param inicio;
+
+# parametros para recuperar los tiempos
+param tiempo_ampl_PL_init;
+param tiempo_total_ampl_PL;
+param tiempo_total_solver_PL;
+param tiempo_total_ampl_PLE;
+param tiempo_total_solver_PLE;
+
+# parametros para valores optimos
+param ValorPL;
+param ValorPLE;
+
+# parametro para tiempo limite
+param termino;
+let termino:=1;
+
+# resolver PL
+let tiempo_ampl_PL_init:= _ampl_time;
+commands grupo03-generacion.run > "basura.txt";
+
+# guardar tiempos de PL
+let tiempo_total_solver_PL:= _total_solve_system_time;
+let tiempo_total_ampl_PL:= _ampl_time - tiempo_ampl_PL_init;
+
+# guardar valor optimo PL
+let ValorPL:= LargoTour;
+
+# guardar numero cortes PL
+let numerocortes_PL:= numerocortes;
+
+# escribir datos PL
+printf "## Archivo (%19s). Entregado por Grupo (03): (Juan Donoso Camila Zarate) ##\n\n",(nombre_reporte) > (nombre_reporte);
+print "Instancia:"&(datos) >> (nombre_reporte);
+printf "\nNumero de nodos: %3d\n", (n) >> (nombre_reporte);
+printf "Numero de cortes agregados para resolver el PL: %3d\n", (numerocortes_PL) >> (nombre_reporte);
+printf "Tiempo TOTAL ampl para resolver PL: %5f\n", (tiempo_total_ampl_PL) >> (nombre_reporte);
+printf "Tiempo TOTAL solver para resolver PL: %5f\n", (tiempo_total_solver_PL) >> (nombre_reporte);
+printf "Valor fraccional óptimo: %4d\n\n", (ValorPL) >> (nombre_reporte);
+
+# 3.
+# recuperamos integralidad y resolvemos
+option maestro.relax_integrality 0;
+solve maestro > "basura.txt";
+
+# aqui se actualiza ValorCorte para el x del problema entero
+solve separacion > "basura.txt"; # en verdad este debiese hacerse solo en caso de que se haya resolvido a tiempo el otro
+display ValorCorte, solve_result;
+# seguir agregando filas (en caso de que ValorCorte <1) 
+repeat {	
+	solve maestro > "basura.txt";
+	if solve_result == 'limit' then {
+		let termino:= 0;
+		break;
+	}
+	else{
+		printf "\nIteracion %s, resolviendo PLE actual\n", numerocortes; 
+		# solve maestro; # Faltaba esto!!! (parece que no por el comienzo del repeat xD)
+		let s:=1; #esto define fuente para s-t corte
+		for {tt in V: tt<>s} {
+			let t:=tt; # esto define sumidero para s-t corte 
+			solve separacion > "basura.txt";
+			if (ValorCorte < 1) then {
+				#encontramos un corte violado
+				#debemos actualizar el problema maestro
+				let numerocortes:= numerocortes + 1;
+				let CORTE[numerocortes]:= {i in V: pi[i]=pi[s]};
+				problem maestro;
+				printf "Se encontro el 1-%s corte CORTE[%s]=", t, numerocortes; 
+				print {v in CORTE[numerocortes]} v;
+				break;
+			}
+		}
+	}
+	
+} while (ValorCorte <1);
+
+# recuperar tiempos PLE
+let tiempo_total_solver_PLE:= _total_solve_system_time - tiempo_total_solver_PL;
+let tiempo_total_ampl_PLE:= _ampl_time - tiempo_total_ampl_PL + tiempo_ampl_PL_init;
+
+
+
+printf "Numero de cortes agregados para resolver el PLE: %3d\n", (numerocortes - numerocortes_PL) >> (nombre_reporte);
+printf "Tiempo TOTAL ampl para resolver PLE: %5f\n", (tiempo_total_ampl_PLE) >> (nombre_reporte);
+printf "Tiempo TOTAL solver para resolver PLE: %5f\n", (tiempo_total_solver_PLE) >> (nombre_reporte);
+
+let siguiente:=0;
+let inicio:=1;
+if termino==1 then {
+	let ValorPLE:= LargoTour;
+	printf "Valor integral óptimo: %4d\n", (ValorPLE) >> (nombre_reporte);
+	printf "El tour optimo es: 1 " >> (nombre_reporte);
+	repeat{
+		let siguiente:= sum {(inicio,j) in E: x[inicio,j] = 1} j;
+		if siguiente<>1 then {
+			printf "%2d ", (siguiente) >> (nombre_reporte);
+			let inicio:=siguiente;
+		}
+	}while(siguiente<>1);
+	
+}
+else{
+	print "No se encontro solucion óptima en el tiempo pedido" >> (nombre_reporte);
+}

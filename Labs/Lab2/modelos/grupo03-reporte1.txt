@@ -1,0 +1,14 @@
+## Archivo (grupo03-reporte1.run). Entregado por Grupo (03): (Juan Donoso Camila Zarate) ##
+Instancia:datos1.dat
+
+Numero de nodos:  17
+Numero de cortes agregados para resolver el PL:  14
+Tiempo TOTAL ampl para resolver PL: 0.131325
+Tiempo TOTAL solver para resolver PL: 0.196585
+Valor fraccional óptimo:   39
+
+Numero de cortes agregados para resolver el PLE:   0
+Tiempo TOTAL ampl para resolver PLE: 0.041438
+Tiempo TOTAL solver para resolver PLE: 0.067045
+Valor integral óptimo:   39
+El tour optimo es: 1  3 14 10 13 11  2 17  9  8  5  4  7 16 15  6 12 

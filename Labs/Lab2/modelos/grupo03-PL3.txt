@@ -1,0 +1,1244 @@
+
+Iteracion 0, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[1]=1 2 18 19
+
+Iteracion 1, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[2]=1 2
+
+Iteracion 2, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[3]=1 2 6 7 8 9 13 14 15 16 17 18 19 20 21 22 23 26 27 28 29 30 31 32 33 36 37 39 40 41 42
+
+Iteracion 3, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[4]=1 2 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 4, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[5]=1 2 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 5, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[6]=1 2 6 7 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 28 29 30 31 32 33 34 35 36 37 41 42
+
+Iteracion 6, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[7]=1 2 8 9 10 11 12 13 14 15 16 17 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 38 39 40 41 42
+
+Iteracion 7, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[8]=1 2 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 8, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[9]=1 2 6 7 11 12 13 14 15 16 17 18 19 20 21 22 23 28 29 30 31 32 33 34 35 36 37 41 42
+
+Iteracion 9, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[10]=1 2 11 12 18 19 20 21 26 27 28 29 32 33 39 40 41 42
+
+Iteracion 10, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[11]=1 2 11 12 41 42
+
+Iteracion 11, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[12]=1 2 26 27 41 42
+
+Iteracion 12, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[13]=1 2 41 42
+
+Iteracion 13, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[14]=1 2 22 23 42
+
+Iteracion 14, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[15]=1 2 42
+
+Iteracion 15, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+Se encontro el 1-6 corte CORTE[16]=1 2 3 4 5 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 16, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[17]=1 2 40 41 42
+
+Iteracion 17, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[18]=1 2 4 5 6 7 11 12 13 14 15 16 17 18 19 20 21 22 23 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 18, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[19]=1 2 5 6 7 11 12 13 14 15 16 17 18 19 20 21 22 23 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 19, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[20]=1 2 18 19 26 27 38 39 40 41 42
+
+Iteracion 20, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[21]=1 2 38 39 40 41 42
+
+Iteracion 21, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+Se encontro el 1-6 corte CORTE[22]=1 2 3 4 5 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 22, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[23]=1 2 3 4 5 6 7 10 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 23, resolviendo relajacion actual
+Se encontro el 1-2 corte CORTE[24]=1 34 35 36 37 38 39 40 41 42
+
+Iteracion 24, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[25]=1 2 34 35 36 37 38 39 40 41 42
+
+Iteracion 25, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+Se encontro el 1-6 corte CORTE[26]=1 2 3 4 5 11 12 13 14 15 16 17 18 19 20 21 22 23 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 26, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[27]=1 2 3 4 5 6 7 11 12 14 15 18 19 20 21 26 27 28 29 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 27, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[28]=1 2 3 4 5 6 7 11 12 13 14 15 16 17 18 19 20 21 22 23 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 28, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+Se encontro el 1-6 corte CORTE[29]=1 2 3 4 5 11 12 13 14 15 16 17 18 19 20 21 22 23 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 29, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[30]=1 2 3 4 5 6 7 11 12 13 14 15 16 17 18 19 20 21 22 23 28 29 30 31 32 33 34 35 38 39 40 41 42
+
+Iteracion 30, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[31]=1 2 13 14 15 16 17 18 19 20 21 22 23 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 31, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+Se encontro el 1-6 corte CORTE[32]=1 2 3 4 5 28 29 38 39 40 41 42
+
+Iteracion 32, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+Se encontro el 1-6 corte CORTE[33]=1 2 3 4 5 18 19 28 29 30 31 34 35 36 37 38 39 40 41 42
+
+Iteracion 33, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+Se encontro el 1-10 corte CORTE[34]=1 2 3 4 5 6 7 8 9 11 12 13 14 15 16 17 18 19 20 21 22 23 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 34, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[35]=1 2 3 4 5 6 7 10 11 12 13 14 15 16 17 18 19 20 21 22 23 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 35, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[36]=1 2 3 4 5 6 7 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 36, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+Se encontro el 1-9 corte CORTE[37]=1 2 3 4 5 6 7 8 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 37, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[38]=1 2 3 4 5 6 7 13 14 15 16 17 20 21 22 23 26 27 28 29 30 31 34 35 36 37 38 39 40 41 42
+
+Iteracion 38, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[39]=1 2 3 4 5 6 7 13 14 15 16 17 18 19 20 21 22 23 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 39, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+Se encontro el 1-9 corte CORTE[40]=1 2 3 4 5 6 7 8 13 14 15 16 17 18 19 22 23 24 25 28 29 30 31 34 35 36 37 38 39 40 41 42
+
+Iteracion 40, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+Se encontro el 1-9 corte CORTE[41]=1 2 3 4 5 6 7 8 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 41, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+Se encontro el 1-9 corte CORTE[42]=1 2 3 4 5 6 7 8 13 14 15 16 17 18 19 20 21 22 23 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 42, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[43]=1 2 3 4 5 6 7 13 14 15 16 17 18 19 20 21 22 23 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 43, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+Se encontro el 1-10 corte CORTE[44]=1 2 3 4 5 6 7 8 9 13 16 17 18 19 20 21 22 23 24 25 26 27 28 29 34 35 38 39 40 41 42
+
+Iteracion 44, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+No se encontraron 1-10 cortes violados
+Se encontro el 1-11 corte CORTE[45]=1 2 3 4 5 6 7 8 9 10 38 39 40 41 42
+
+Iteracion 45, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+Se encontro el 1-10 corte CORTE[46]=1 2 3 4 5 6 7 8 9 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 46, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+No se encontraron 1-10 cortes violados
+Se encontro el 1-11 corte CORTE[47]=1 2 3 4 5 6 7 8 9 10 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 47, resolviendo relajacion actual
+Se encontro el 1-2 corte CORTE[48]=1 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 48, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[49]=1 2 18 19 22 23 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 49, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[50]=1 2 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 50, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+Se encontro el 1-10 corte CORTE[51]=1 2 3 4 5 6 7 8 9 13 14 15 16 17 18 19 20 21 22 23 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 51, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+Se encontro el 1-6 corte CORTE[52]=1 2 3 4 5 24 25 26 27 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 52, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[53]=1 2 3 4 5 6 7 14 15 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 53, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[54]=1 2 3 4 5 6 7 14 15 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 54, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+Se encontro el 1-6 corte CORTE[55]=1 2 3 4 5 34 35 36 37 38 39 40 41 42
+
+Iteracion 55, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[56]=1 2 3 4 5 6 7 20 21 22 23 28 29 30 31 34 35 36 37 38 39 40 41 42
+
+Iteracion 56, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[57]=1 2 30 31 34 35 36 37 38 39 40 41 42
+
+Iteracion 57, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[58]=1 2 3 4 5 6 7 14 15 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 58, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[59]=1 2 30 31 39 40 41 42
+
+Iteracion 59, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+Se encontro el 1-9 corte CORTE[60]=1 2 3 4 5 6 7 8 14 15 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 60, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+Se encontro el 1-9 corte CORTE[61]=1 2 3 4 5 6 7 8 38 39 40 41 42
+
+Iteracion 61, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+Se encontro el 1-9 corte CORTE[62]=1 2 3 4 5 6 7 8 14 15 18 19 20 21 22 23 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 62, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+Se encontro el 1-10 corte CORTE[63]=1 2 3 4 5 6 7 8 9 14 15 18 19 20 21 22 23 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 63, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+Se encontro el 1-9 corte CORTE[64]=1 2 3 4 5 6 7 8 14 15 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 64, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+Se encontro el 1-9 corte CORTE[65]=1 2 3 4 5 6 7 8 14 15 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 65, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+Se encontro el 1-10 corte CORTE[66]=1 2 3 4 5 6 7 8 9 14 15 34 35 38 39 40 41 42
+
+Iteracion 66, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+Se encontro el 1-10 corte CORTE[67]=1 2 3 4 5 6 7 8 9 14 15 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 67, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[68]=1 2 3 4 5 6 7 14 15 22 23 24 25 26 27 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 68, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[69]=1 2 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 69, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[70]=1 2 3 4 5 6 7 14 15 34 35 36 37 38 39 40 41 42
+
+Iteracion 70, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[71]=1 2 3 4 5 6 7 28 29 30 31 34 35 36 37 38 39 40 41 42
+
+Iteracion 71, resolviendo relajacion actual
+Se encontro el 1-2 corte CORTE[72]=1 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 72, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+Se encontro el 1-10 corte CORTE[73]=1 2 3 4 5 6 7 8 9 38 39 40 41 42
+
+Iteracion 73, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+No se encontraron 1-10 cortes violados
+No se encontraron 1-11 cortes violados
+No se encontraron 1-12 cortes violados
+No se encontraron 1-13 cortes violados
+Se encontro el 1-14 corte CORTE[74]=1 2 3 4 5 6 7 8 9 10 11 12 13 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 74, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+Se encontro el 1-6 corte CORTE[75]=1 2 3 4 5 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 75, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+Se encontro el 1-6 corte CORTE[76]=1 2 3 4 5 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 76, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[77]=1 2 3 4 5 6 7 24 25 34 35 36 37 38 39 40 41 42
+
+Iteracion 77, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+Se encontro el 1-9 corte CORTE[78]=1 2 3 4 5 6 7 8 34 35 36 37 38 39 40 41 42
+
+Iteracion 78, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[79]=1 2 3 4 5 6 7 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 79, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[80]=1 2 3 4 5 6 7 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 80, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[81]=1 2 28 29 39 40 41 42
+
+Iteracion 81, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[82]=1 2 39 40 41 42
+
+Iteracion 82, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[83]=1 2 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 83, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[84]=1 2 3 4 5 6 7 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 84, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+No se encontraron 1-10 cortes violados
+No se encontraron 1-11 cortes violados
+No se encontraron 1-12 cortes violados
+Se encontro el 1-13 corte CORTE[85]=1 2 3 4 5 6 7 8 9 10 11 12 18 19 20 21 22 23 24 25 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 85, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+Se encontro el 1-10 corte CORTE[86]=1 2 3 4 5 6 7 8 9 24 25 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 86, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+No se encontraron 1-10 cortes violados
+No se encontraron 1-11 cortes violados
+No se encontraron 1-12 cortes violados
+No se encontraron 1-13 cortes violados
+No se encontraron 1-14 cortes violados
+No se encontraron 1-15 cortes violados
+Se encontro el 1-16 corte CORTE[87]=1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 18 19 20 21 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 87, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+Se encontro el 1-10 corte CORTE[88]=1 2 3 4 5 6 7 8 9 13 14 15 16 17 18 19 20 21 22 23 28 29 30 31 34 35 36 37 38 39 40 41 42
+
+Iteracion 88, resolviendo relajacion actual
+Se encontro el 1-2 corte CORTE[89]=1 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 89, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+Se encontro el 1-10 corte CORTE[90]=1 2 3 4 5 6 7 8 9 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 90, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+Se encontro el 1-10 corte CORTE[91]=1 2 3 4 5 6 7 8 9 30 31 34 35 36 37 38 39 40 41 42
+
+Iteracion 91, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+No se encontraron 1-10 cortes violados
+No se encontraron 1-11 cortes violados
+No se encontraron 1-12 cortes violados
+No se encontraron 1-13 cortes violados
+No se encontraron 1-14 cortes violados
+No se encontraron 1-15 cortes violados
+No se encontraron 1-16 cortes violados
+No se encontraron 1-17 cortes violados
+No se encontraron 1-18 cortes violados
+No se encontraron 1-19 cortes violados
+No se encontraron 1-20 cortes violados
+No se encontraron 1-21 cortes violados
+Se encontro el 1-22 corte CORTE[92]=1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 92, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+No se encontraron 1-10 cortes violados
+No se encontraron 1-11 cortes violados
+No se encontraron 1-12 cortes violados
+Se encontro el 1-13 corte CORTE[93]=1 2 3 4 5 6 7 8 9 10 11 12 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 93, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+Se encontro el 1-9 corte CORTE[94]=1 2 3 4 5 6 7 8 26 27 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 94, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+Se encontro el 1-6 corte CORTE[95]=1 2 3 4 5 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 95, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+Se encontro el 1-9 corte CORTE[96]=1 2 3 4 5 6 7 8 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 96, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[97]=1 2 3 4 5 6 7 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 97, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+Se encontro el 1-10 corte CORTE[98]=1 2 3 4 5 6 7 8 9 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 98, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+No se encontraron 1-10 cortes violados
+No se encontraron 1-11 cortes violados
+No se encontraron 1-12 cortes violados
+Se encontro el 1-13 corte CORTE[99]=1 2 3 4 5 6 7 8 9 10 11 12 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 99, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+No se encontraron 1-10 cortes violados
+No se encontraron 1-11 cortes violados
+No se encontraron 1-12 cortes violados
+No se encontraron 1-13 cortes violados
+No se encontraron 1-14 cortes violados
+No se encontraron 1-15 cortes violados
+No se encontraron 1-16 cortes violados
+No se encontraron 1-17 cortes violados
+No se encontraron 1-18 cortes violados
+Se encontro el 1-19 corte CORTE[100]=1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 100, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+No se encontraron 1-10 cortes violados
+Se encontro el 1-11 corte CORTE[101]=1 2 3 4 5 6 7 8 9 10 16 17 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 101, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+No se encontraron 1-10 cortes violados
+Se encontro el 1-11 corte CORTE[102]=1 2 3 4 5 6 7 8 9 10 24 25 26 27 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 102, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+No se encontraron 1-10 cortes violados
+No se encontraron 1-11 cortes violados
+No se encontraron 1-12 cortes violados
+No se encontraron 1-13 cortes violados
+No se encontraron 1-14 cortes violados
+No se encontraron 1-15 cortes violados
+No se encontraron 1-16 cortes violados
+No se encontraron 1-17 cortes violados
+No se encontraron 1-18 cortes violados
+No se encontraron 1-19 cortes violados
+No se encontraron 1-20 cortes violados
+No se encontraron 1-21 cortes violados
+No se encontraron 1-22 cortes violados
+No se encontraron 1-23 cortes violados
+Se encontro el 1-24 corte CORTE[103]=1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 103, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+No se encontraron 1-10 cortes violados
+No se encontraron 1-11 cortes violados
+No se encontraron 1-12 cortes violados
+No se encontraron 1-13 cortes violados
+No se encontraron 1-14 cortes violados
+No se encontraron 1-15 cortes violados
+Se encontro el 1-16 corte CORTE[104]=1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 104, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+No se encontraron 1-10 cortes violados
+Se encontro el 1-11 corte CORTE[105]=1 2 3 4 5 6 7 8 9 10 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 105, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+Se encontro el 1-10 corte CORTE[106]=1 2 3 4 5 6 7 8 9 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 106, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+No se encontraron 1-10 cortes violados
+No se encontraron 1-11 cortes violados
+No se encontraron 1-12 cortes violados
+No se encontraron 1-13 cortes violados
+No se encontraron 1-14 cortes violados
+No se encontraron 1-15 cortes violados
+No se encontraron 1-16 cortes violados
+No se encontraron 1-17 cortes violados
+No se encontraron 1-18 cortes violados
+No se encontraron 1-19 cortes violados
+No se encontraron 1-20 cortes violados
+No se encontraron 1-21 cortes violados
+No se encontraron 1-22 cortes violados
+No se encontraron 1-23 cortes violados
+No se encontraron 1-24 cortes violados
+No se encontraron 1-25 cortes violados
+Se encontro el 1-26 corte CORTE[107]=1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 107, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+No se encontraron 1-10 cortes violados
+No se encontraron 1-11 cortes violados
+No se encontraron 1-12 cortes violados
+No se encontraron 1-13 cortes violados
+No se encontraron 1-14 cortes violados
+No se encontraron 1-15 cortes violados
+No se encontraron 1-16 cortes violados
+No se encontraron 1-17 cortes violados
+No se encontraron 1-18 cortes violados
+No se encontraron 1-19 cortes violados
+No se encontraron 1-20 cortes violados
+No se encontraron 1-21 cortes violados
+No se encontraron 1-22 cortes violados
+No se encontraron 1-23 cortes violados
+No se encontraron 1-24 cortes violados
+No se encontraron 1-25 cortes violados
+No se encontraron 1-26 cortes violados
+No se encontraron 1-27 cortes violados
+Se encontro el 1-28 corte CORTE[108]=1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 108, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+No se encontraron 1-10 cortes violados
+No se encontraron 1-11 cortes violados
+No se encontraron 1-12 cortes violados
+No se encontraron 1-13 cortes violados
+No se encontraron 1-14 cortes violados
+No se encontraron 1-15 cortes violados
+No se encontraron 1-16 cortes violados
+No se encontraron 1-17 cortes violados
+No se encontraron 1-18 cortes violados
+No se encontraron 1-19 cortes violados
+No se encontraron 1-20 cortes violados
+No se encontraron 1-21 cortes violados
+No se encontraron 1-22 cortes violados
+No se encontraron 1-23 cortes violados
+No se encontraron 1-24 cortes violados
+No se encontraron 1-25 cortes violados
+No se encontraron 1-26 cortes violados
+No se encontraron 1-27 cortes violados
+No se encontraron 1-28 cortes violados
+No se encontraron 1-29 cortes violados
+No se encontraron 1-30 cortes violados
+No se encontraron 1-31 cortes violados
+Se encontro el 1-32 corte CORTE[109]=1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 34 35 36 37 38 39 40 41 42
+
+Iteracion 109, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+No se encontraron 1-10 cortes violados
+No se encontraron 1-11 cortes violados
+No se encontraron 1-12 cortes violados
+No se encontraron 1-13 cortes violados
+No se encontraron 1-14 cortes violados
+No se encontraron 1-15 cortes violados
+No se encontraron 1-16 cortes violados
+No se encontraron 1-17 cortes violados
+No se encontraron 1-18 cortes violados
+No se encontraron 1-19 cortes violados
+No se encontraron 1-20 cortes violados
+No se encontraron 1-21 cortes violados
+No se encontraron 1-22 cortes violados
+No se encontraron 1-23 cortes violados
+No se encontraron 1-24 cortes violados
+No se encontraron 1-25 cortes violados
+No se encontraron 1-26 cortes violados
+No se encontraron 1-27 cortes violados
+No se encontraron 1-28 cortes violados
+No se encontraron 1-29 cortes violados
+Se encontro el 1-30 corte CORTE[110]=1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 110, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[111]=1 2 3 4 5 6 7 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+Iteracion 111, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+No se encontraron 1-10 cortes violados
+No se encontraron 1-11 cortes violados
+No se encontraron 1-12 cortes violados
+No se encontraron 1-13 cortes violados
+No se encontraron 1-14 cortes violados
+No se encontraron 1-15 cortes violados
+No se encontraron 1-16 cortes violados
+No se encontraron 1-17 cortes violados
+No se encontraron 1-18 cortes violados
+No se encontraron 1-19 cortes violados
+No se encontraron 1-20 cortes violados
+No se encontraron 1-21 cortes violados
+No se encontraron 1-22 cortes violados
+No se encontraron 1-23 cortes violados
+No se encontraron 1-24 cortes violados
+No se encontraron 1-25 cortes violados
+No se encontraron 1-26 cortes violados
+No se encontraron 1-27 cortes violados
+No se encontraron 1-28 cortes violados
+No se encontraron 1-29 cortes violados
+No se encontraron 1-30 cortes violados
+No se encontraron 1-31 cortes violados
+No se encontraron 1-32 cortes violados
+No se encontraron 1-33 cortes violados
+No se encontraron 1-34 cortes violados
+No se encontraron 1-35 cortes violados
+No se encontraron 1-36 cortes violados
+No se encontraron 1-37 cortes violados
+No se encontraron 1-38 cortes violados
+No se encontraron 1-39 cortes violados
+No se encontraron 1-40 cortes violados
+No se encontraron 1-41 cortes violados
+No se encontraron 1-42 cortes violados
+Se agregaron en total 111 cortes
+x [*,*]
+:     1     2     3     4     5     6     7     8     9    10    11   12   13 :=
+1     .    0.5   0     0     0     0     0     0     0     0     0     0   0
+2    0.5    .    0.5   0     0     0     0     0     0     0     0     0   0
+3    0     0.5    .    0.5   0     0     0     0     0     0     0     0   0
+4    0     0     0.5    .    0.5   0     0     0     0     0     0     0   0
+5    0     0     0     0.5    .    0.5   0     0     0     0     0     0   0
+6    0     0     0     0     0.5    .    0.5   0     0     0     0     0   0
+7    0     0     0     0     0     0.5    .    0.5   0     0     0     0   0
+8    0     0     0     0     0     0     0.5    .    0.5   0     0     0   0
+9    0     0     0     0     0     0     0     0.5    .    0.5   0     0   0
+10   0     0     0     0     0     0     0     0     0.5    .    0     0   0
+11   0     0     0     0     0     0     0     0     0     0      .    1   0
+12   0     0     0     0     0     0     0     0     0     0.5   0     .   0.5
+13   0     0     0     0     0     0     0     0     0     0     0     0    .
+14   0     0     0     0     0     0     0     0     0     0     0     0   0.5
+15   0     0     0     0     0     0     0     0     0     0     0     0   0
+16   0     0     0     0     0     0     0     0     0     0     0     0   0
+17   0     0     0     0     0     0     0     0     0     0     0     0   0
+18   0     0     0     0     0     0     0     0     0     0     0     0   0
+19   0     0     0     0     0     0     0     0     0     0     0     0   0
+20   0     0     0     0     0     0     0     0     0     0     0     0   0
+21   0     0     0     0     0     0     0     0     0     0     0     0   0
+22   0     0     0     0     0     0     0     0     0     0     0     0   0
+23   0     0     0     0     0     0     0     0     0     0     0.5   0   0
+24   0     0     0     0     0     0     0     0     0     0     0.5   0   0
+25   0     0     0     0     0     0     0     0     0     0     0     0   0
+26   0     0     0     0     0     0     0     0     0     0     0     0   0
+27   0     0     0     0     0     0     0     0     0     0     0     0   0
+28   0     0     0     0     0     0     0     0     0     0     0     0   0
+29   0     0     0     0     0     0     0     0     0     0     0     0   0
+30   0     0     0     0     0     0     0     0     0     0     0     0   0
+31   0     0     0     0     0     0     0     0     0     0     0     0   0
+32   0     0     0     0     0     0     0     0     0     0     0     0   0
+33   0     0     0     0     0     0     0     0     0     0     0     0   0
+34   0     0     0     0     0     0     0     0     0     0     0     0   0
+35   0     0     0     0     0     0     0     0     0     0     0     0   0
+36   0     0     0     0     0     0     0     0     0     0     0     0   0
+37   0     0     0     0     0     0     0     0     0     0     0     0   0
+38   0     0     0     0     0     0     0     0     0     0     0     0   0
+39   0     0     0     0     0     0     0     0     0     0     0     0   0
+40   0     0     0     0     0     0     0     0     0     0     0     0   0
+41   0     0     0     0     0     0     0     0     0     0     0     0   0
+42   0.5   0     0     0     0     0     0     0     0     0     0     0   0
+
+:    14    15    16    17    18    19    20    21    22    23    24    25    :=
+1    0     0     0     0     0     0     0     0     0     0     0     0
+2    0     0     0     0     0     0     0     0     0     0     0     0
+3    0     0     0     0     0     0     0     0     0     0     0     0
+4    0     0     0     0     0     0     0     0     0     0     0     0
+5    0     0     0     0     0     0     0     0     0     0     0     0
+6    0     0     0     0     0     0     0     0     0     0     0     0
+7    0     0     0     0     0     0     0     0     0     0     0     0
+8    0     0     0     0     0     0     0     0     0     0     0     0
+9    0     0     0     0     0     0     0     0     0     0     0     0
+10   0     0     0     0     0     0     0     0     0     0     0     0.5
+11   0     0     0     0     0     0     0     0     0     0     0     0
+12   0     0     0     0     0     0     0     0     0     0     0     0
+13   0.5   0     0     0.5   0     0     0     0     0     0     0     0
+14    .    0.5   0     0     0     0     0     0     0     0     0     0
+15   0.5    .    0.5   0     0     0     0     0     0     0     0     0
+16   0     0      .    0.5   0.5   0     0     0     0     0     0     0
+17   0     0     0.5    .    0     0     0     0     0     0.5   0     0
+18   0     0.5   0     0      .    0.5   0     0     0     0     0     0
+19   0     0     0     0     0.5    .    0.5   0     0     0     0     0
+20   0     0     0     0     0     0.5    .    0.5   0     0     0     0
+21   0     0     0     0     0     0     0.5    .    0.5   0     0     0
+22   0     0     0     0     0     0     0     0      .    0.5   0     0
+23   0     0     0     0     0     0     0     0     0.5    .    0     0
+24   0     0     0     0     0     0     0     0     0     0      .    0.5
+25   0     0     0     0     0     0     0     0     0     0     0.5    .
+26   0     0     0     0     0     0     0     0     0     0     0     0
+27   0     0     0     0     0     0     0     0     0     0     0.5   0
+28   0     0     0     0     0     0     0     0.5   0     0     0     0
+29   0     0     0     0     0     0     0     0     0     0     0     0
+30   0     0     0     0     0     0     0     0     0     0     0     0
+31   0     0     0     0     0     0     0     0     0     0     0     0
+32   0     0     0     0     0     0     0     0     0     0     0     0
+33   0     0     0     0     0     0     0     0     0     0     0     0
+34   0     0     0     0     0     0     0     0     0     0     0     0
+35   0     0     0     0     0     0     0     0     0     0     0     0
+36   0     0     0     0     0     0     0     0     0     0     0     0
+37   0     0     0     0     0     0     0     0     0     0     0     0
+38   0     0     0     0     0     0     0     0     0     0     0     0
+39   0     0     0     0     0     0     0     0     0     0     0     0
+40   0     0     0     0     0     0     0     0     0     0     0     0
+41   0     0     0     0     0     0     0     0     0     0     0     0
+42   0     0     0     0     0     0     0     0     0     0     0     0
+
+:    26    27    28    29    30    31    32    33    34    35    36    37    :=
+1    0     0     0     0     0     0     0     0     0     0     0     0
+2    0     0     0     0     0     0     0     0     0     0     0     0
+3    0     0     0     0     0     0     0     0     0     0     0     0
+4    0     0     0     0     0     0     0     0     0     0     0     0
+5    0     0     0     0     0     0     0     0     0     0     0     0
+6    0     0     0     0     0     0     0     0     0     0     0     0
+7    0     0     0     0     0     0     0     0     0     0     0     0
+8    0     0     0     0     0     0     0     0     0     0     0     0
+9    0     0     0     0     0     0     0     0     0     0     0     0
+10   0     0     0     0     0     0     0     0     0     0     0     0
+11   0     0     0     0     0     0     0     0     0     0     0     0
+12   0     0     0     0     0     0     0     0     0     0     0     0
+13   0     0     0     0     0     0     0     0     0     0     0     0
+14   0     0     0     0     0     0     0     0     0     0     0     0
+15   0     0     0     0     0     0     0     0     0     0     0     0
+16   0     0     0     0     0     0     0     0     0     0     0     0
+17   0     0     0     0     0     0     0     0     0     0     0     0
+18   0     0     0     0     0     0     0     0     0     0     0     0
+19   0     0     0     0     0     0     0     0     0     0     0     0
+20   0     0     0     0     0     0     0     0     0     0     0     0
+21   0     0     0     0     0     0     0     0     0     0     0     0
+22   0     0.5   0     0     0     0     0     0     0     0     0     0
+23   0     0     0     0     0     0     0     0     0     0     0     0
+24   0     0     0     0     0     0     0     0     0     0     0     0
+25   0.5   0     0     0     0     0     0     0     0     0     0     0
+26    .    0.5   0.5   0     0     0     0     0     0     0     0     0
+27   0.5    .    0     0     0     0     0     0     0     0     0     0
+28   0     0      .    0.5   0     0     0     0     0     0     0     0
+29   0     0     0.5    .    0.5   0     0     0     0     0     0     0
+30   0     0     0     0.5    .    0.5   0     0     0     0     0     0
+31   0     0     0     0     0.5    .    0.5   0     0     0     0     0
+32   0     0     0     0     0     0.5    .    0.5   0     0     0     0
+33   0     0     0     0     0     0     0.5    .    0.5   0     0     0
+34   0     0     0     0     0     0     0     0.5    .    0.5   0     0
+35   0     0     0     0     0     0     0     0     0.5    .    0.5   0
+36   0     0     0     0     0     0     0     0     0     0.5    .    0.5
+37   0     0     0     0     0     0     0     0     0     0     0.5    .
+38   0     0     0     0     0     0     0     0     0     0     0     0.5
+39   0     0     0     0     0     0     0     0     0     0     0     0
+40   0     0     0     0     0     0     0     0     0     0     0     0
+41   0     0     0     0     0     0     0     0     0     0     0     0
+42   0     0     0     0     0     0     0     0     0     0     0     0
+
+:    38    39    40    41    42     :=
+1    0     0     0     0     0.5
+2    0     0     0     0     0
+3    0     0     0     0     0
+4    0     0     0     0     0
+5    0     0     0     0     0
+6    0     0     0     0     0
+7    0     0     0     0     0
+8    0     0     0     0     0
+9    0     0     0     0     0
+10   0     0     0     0     0
+11   0     0     0     0     0
+12   0     0     0     0     0
+13   0     0     0     0     0
+14   0     0     0     0     0
+15   0     0     0     0     0
+16   0     0     0     0     0
+17   0     0     0     0     0
+18   0     0     0     0     0
+19   0     0     0     0     0
+20   0     0     0     0     0
+21   0     0     0     0     0
+22   0     0     0     0     0
+23   0     0     0     0     0
+24   0     0     0     0     0
+25   0     0     0     0     0
+26   0     0     0     0     0
+27   0     0     0     0     0
+28   0     0     0     0     0
+29   0     0     0     0     0
+30   0     0     0     0     0
+31   0     0     0     0     0
+32   0     0     0     0     0
+33   0     0     0     0     0
+34   0     0     0     0     0
+35   0     0     0     0     0
+36   0     0     0     0     0
+37   0.5   0     0     0     0
+38    .    0.5   0     0     0
+39   0.5    .    0.5   0     0
+40   0     0.5    .    0.5   0
+41   0     0     0.5    .    0.5
+42   0     0     0     0.5    .
+;
+
+LargoTour = 697
+

@@ -1,0 +1,45 @@
+## Archivo (grupo03-generacion.run). Entregado por Grupo (03): (Camila Zárate Juan Donoso) ##
+# commands grupo03-generacion.run > grupo03-PL1.txt;
+# invocar opciones ----
+option solver cplex;
+option solver_msg 0;
+option cplex_options "timelimit=30"; 
+option presolve 0;
+
+# invocar modelos, datos y crear problemas.
+model grupo03-maestro.mod;
+model grupo03-corte.mod;
+data (datos);
+
+problem maestro: x, LargoTour, GradoEntrada, GradoSalida, DesigualdadCorte;
+problem separacion: y, pi, ValorCorte, restriccPi, restriccVar;
+
+# relajar integralidad
+option maestro.relax_integrality 1;
+
+# generar filas
+let numerocortes:= 0;
+repeat {
+	printf "\nIteracion %s, resolviendo relajacion actual\n", numerocortes; 
+	solve maestro > "basura.txt";
+	let s:=1; #esto define fuente para s-t corte
+	for {tt in V: tt<>s} {
+		let t:=tt; # esto define sumidero para s-t corte 
+		solve separacion > "basura.txt";
+		if (ValorCorte < 1) then {
+			#encontramos un corte violado
+			#debemos actualizar el problema maestro
+			let numerocortes:= numerocortes + 1;
+			let CORTE[numerocortes]:= {i in V: pi[i]=pi[s]};
+			problem maestro;
+			printf "Se encontro el 1-%s corte CORTE[%s]=", t, numerocortes; 
+			print {v in CORTE[numerocortes]} v;
+			break;
+		}
+		printf "No se encontraron 1-%s cortes violados\n", t; 
+	}
+} while (ValorCorte <1);
+
+printf "Se agregaron en total %s cortes\n", numerocortes; 
+display x;
+display LargoTour; 

@@ -2,19 +2,19 @@
 
 Instancia test1.dat
 modelo DFJ
-LP: 39.000000 IP: 39.000000 INT-GAP: 0.000000 % RES-GAP: 0.000000 tiempo-ampl: 5.333111 tiempo-solver: 0.514992
+LP: 39.000000 IP: 39.000000 INT-GAP: 0.000000 % RES-GAP: 0.000000 tiempo-ampl: 5.396723 tiempo-solver: 0.521555
 modelo MTZ
-LP: 2.250000 IP: 39.000000 INT-GAP: 94.230769 % RES-GAP: 0.000000 tiempo-ampl: 10.829805 tiempo-solver: 0.111995
+LP: 2.250000 IP: 39.000000 INT-GAP: 94.230769 % RES-GAP: 0.000000 tiempo-ampl: 10.180661 tiempo-solver: 0.097368
 modelo WONG
-LP: 39.000000 IP: 39.000000 INT-GAP: 0.000000 % RES-GAP: 0.000000 tiempo-ampl: 10.992185 tiempo-solver: 0.641544
+LP: 39.000000 IP: 39.000000 INT-GAP: 0.000000 % RES-GAP: 0.000000 tiempo-ampl: 10.312599 tiempo-solver: 0.401762
 
 Instancia test2.dat
 modelo DFJ
 AMPL no pudo resolver esta instancia.
 modelo MTZ
-LP: 835.480000 IP: 937.000000 INT-GAP: 10.834578 % RES-GAP: 0.000000 tiempo-ampl: 14.275368 tiempo-solver: 3.296981
+LP: 835.480000 IP: 937.000000 INT-GAP: 10.834578 % RES-GAP: 0.000000 tiempo-ampl: 13.697152 tiempo-solver: 3.057934
 modelo WONG
-LP: 937.000000 IP: 937.000000 INT-GAP: 0.000000 % RES-GAP: 0.000000 tiempo-ampl: 14.651740 tiempo-solver: 0.133095
+LP: 937.000000 IP: 937.000000 INT-GAP: 0.000000 % RES-GAP: 0.000000 tiempo-ampl: 14.034336 tiempo-solver: 0.106712
 
 Instancia test3.dat
 modelo DFJ

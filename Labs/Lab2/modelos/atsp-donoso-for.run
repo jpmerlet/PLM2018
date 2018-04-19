@@ -10,7 +10,7 @@ mipinterval=1 threads=1 mipstartstatus=0 mipstartvalue=0 \
 logfile=log1.txt branch=-1 presolvenode=-1 \
 timing=15 timelimit=300 return_mipgap=7';
 
-## parametros para el reporte ##
+## parametros para el reporte 
 param tiempo_ampl; 
 param tiempo_solver;
 param IP;
@@ -20,13 +20,13 @@ param RES_GAP;
 param input_file symbolic; # nombre del archivo input 
 param nombre_mod symbolic;
 
-## cargar modelo ##
+## cargar modelo 
 model atsp-donoso.mod;
 
 ## Escribit reporte
 printf "## Archivo atsp-donoso.txt ##\n\n"> "atsp-donoso.txt";
 
-suffix relmipgap OUT;
+suffix relmipgap OUT; # se agrega esta linea para recuperar relmipgap 
 for {num_instancia in {1..3}}{
 	let input_file:= "test"&num_instancia&".dat";
 	printf "Instancia %8s\n",(input_file) > "atsp-donoso.txt";

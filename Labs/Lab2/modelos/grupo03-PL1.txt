@@ -1,0 +1,119 @@
+
+Iteracion 0, resolviendo relajacion actual
+Se encontro el 1-2 corte CORTE[1]=1 12
+
+Iteracion 1, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[2]=1 2 10 11 12 13
+
+Iteracion 2, resolviendo relajacion actual
+Se encontro el 1-2 corte CORTE[3]=1 8 12
+
+Iteracion 3, resolviendo relajacion actual
+Se encontro el 1-2 corte CORTE[4]=1 3 8 9 12 14 17
+
+Iteracion 4, resolviendo relajacion actual
+Se encontro el 1-2 corte CORTE[5]=1 8 9 12 17
+
+Iteracion 5, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+Se encontro el 1-4 corte CORTE[6]=1 2 3 6 7 8 9 10 11 12 13 14 15 16 17
+
+Iteracion 6, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+Se encontro el 1-4 corte CORTE[7]=1 2 3 7 8 9 10 11 12 13 14 15 16 17
+
+Iteracion 7, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+Se encontro el 1-4 corte CORTE[8]=1 2 3 10 11 12 13 14
+
+Iteracion 8, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+Se encontro el 1-3 corte CORTE[9]=1 2 4 5 6 7 8 9 10 11 12 13 15 16 17
+
+Iteracion 9, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+Se encontro el 1-4 corte CORTE[10]=1 2 3 8 9 10 11 12 13 14 17
+
+Iteracion 10, resolviendo relajacion actual
+Se encontro el 1-2 corte CORTE[11]=1 4 5 6 7 12 15 16
+
+Iteracion 11, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+Se encontro el 1-8 corte CORTE[12]=1 2 3 4 5 6 7 10 11 12 13 14 15 16
+
+Iteracion 12, resolviendo relajacion actual
+Se encontro el 1-2 corte CORTE[13]=1 3 4 5 6 7 8 9 10 11 12 14 15 16 17
+
+Iteracion 13, resolviendo relajacion actual
+Se encontro el 1-2 corte CORTE[14]=1 4 5 6 7 8 9 12 15 16 17
+
+Iteracion 14, resolviendo relajacion actual
+No se encontraron 1-2 cortes violados
+No se encontraron 1-3 cortes violados
+No se encontraron 1-4 cortes violados
+No se encontraron 1-5 cortes violados
+No se encontraron 1-6 cortes violados
+No se encontraron 1-7 cortes violados
+No se encontraron 1-8 cortes violados
+No se encontraron 1-9 cortes violados
+No se encontraron 1-10 cortes violados
+No se encontraron 1-11 cortes violados
+No se encontraron 1-12 cortes violados
+No se encontraron 1-13 cortes violados
+No se encontraron 1-14 cortes violados
+No se encontraron 1-15 cortes violados
+No se encontraron 1-16 cortes violados
+No se encontraron 1-17 cortes violados
+Se agregaron en total 14 cortes
+x [*,*]
+:      1       2       3      4     5    6     7      8    9  10    11      :=
+1     .      0       0.625   0     0     0   0       0     0   0   0
+2    0        .      0       0     0     0   0.125   0.5   0   0   0
+3    0       0        .      0     0     0   0       0     0   0   0
+4    0       0       0        .    0.5   0   0       0     0   0   0
+5    0       0       0       0.5    .    0   0       0     0   0   0
+6    0       0.375   0       0.5   0     .   0       0     0   0   0
+7    0       0       0       0     0     1    .      0     0   0   0
+8    0       0       0       0     0.5   0   0        .    0   0   0
+9    0       0       0       0     0     0   0       0.5   .   0   0
+10   0       0.625   0       0     0     0   0       0     0   .   0
+11   0       0       0       0     0     0   0       0     0   1    .
+12   0.625   0       0       0     0     0   0       0     0   0   0
+13   0       0       0       0     0     0   0       0     0   0   0.625
+14   0.25    0       0.375   0     0     0   0       0     0   0   0.375
+15   0.125   0       0       0     0     0   0.5     0     0   0   0
+16   0       0       0       0     0     0   0.375   0     0   0   0
+17   0       0       0       0     0     0   0       0     1   0   0
+
+:     12      13      14      15      16     17     :=
+1    0.375   0       0       0       0       0
+2    0       0.375   0       0       0       0
+3    0.125   0.25    0.625   0       0       0
+4    0       0       0       0       0       0.5
+5    0       0       0       0       0.5     0
+6    0       0       0       0       0.125   0
+7    0       0       0       0       0       0
+8    0       0       0       0       0       0.5
+9    0.5     0       0       0       0       0
+10   0       0.375   0       0       0       0
+11   0       0       0       0       0       0
+12    .      0       0       0.375   0       0
+13   0        .      0.375   0       0       0
+14   0       0        .      0       0       0
+15   0       0       0        .      0.375   0
+16   0       0       0       0.625    .      0
+17   0       0       0       0       0        .
+;
+
+LargoTour = 39
+
