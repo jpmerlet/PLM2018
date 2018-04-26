@@ -1,0 +1,62 @@
+Reporte WONG Grupo 03
+
+
+Instancia 1:
+
+Tiempo total de ampl usado: 0.078307
+Tiempo total de solver usado: 2.614835
+Se resolvió la relajación lineal y dio un valor de 39.000000
+Se resolvió el problema entero y dio un valor de 39.000000
+El tour optimo es: 1  14   3  13  10  11   2  17   9   8   5   4  16   7  15   6  12 
+El gap de integralidad fue:   0 %
+
+Instancia 2:
+
+Tiempo total de ampl usado: 0.314203
+Tiempo total de solver usado: 16.205671
+Se resolvió la relajación lineal y dio un valor de 937.000000
+Se resolvió el problema entero y dio un valor de 937.000000
+El tour optimo es: 1  25  24  23  26  22  21  17  18  20  19  16  11  13  12  15  14  10   9   8   7   5   6   4   3   2 
+El gap de integralidad fue:   0 %
+
+Instancia 3:
+
+Tiempo total de ampl usado: 1.460617
+Tiempo total de solver usado: 180.984547
+Se resolvió la relajación lineal y dio un valor de 697.000000
+No se resolvió el problema entero
+
+Instancia 4:
+
+Tiempo total de ampl usado: 3.328979
+Tiempo total de solver usado: 183.205497
+No se resolvió la relajación lineal
+No se resolvió el problema entero
+
+Instancia 5:
+
+Tiempo total de ampl usado: 7.829684
+Tiempo total de solver usado: 187.294640
+No se resolvió la relajación lineal
+No se resolvió el problema entero
+
+Instancia 6:
+
+Tiempo total de ampl usado: 2.417217
+Tiempo total de solver usado: 181.071753
+Se resolvió la relajación lineal y dio un valor de 5611.000000
+No se resolvió el problema entero
+
+Instancia 7:
+
+Tiempo total de ampl usado: 5.795666
+Tiempo total de solver usado: 184.766146
+No se resolvió la relajación lineal
+No se resolvió el problema entero
+
+Instancia 8:
+
+Tiempo total de ampl usado: 9.563230
+Tiempo total de solver usado: 187.304350
+No se resolvió la relajación lineal
+No se resolvió el problema entero

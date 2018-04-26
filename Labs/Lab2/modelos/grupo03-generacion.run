@@ -3,16 +3,20 @@
 # invocar opciones ----
 option solver cplex;
 option solver_msg 0;
-option cplex_options "timelimit=30"; 
+option cplex_options "timelimit=180"; 
 option presolve 0;
+option cplex_options 'feasibility=1e-4';
 
 # invocar modelos, datos y crear problemas.
 model grupo03-maestro.mod;
 model grupo03-corte.mod;
+#model grupo03-corte-aux.mod;
+#data (datos);
 data (datos);
 
 problem maestro: x, LargoTour, GradoEntrada, GradoSalida, DesigualdadCorte;
 problem separacion: y, pi, ValorCorte, restriccPi, restriccVar;
+#problem separacion: y, pi, ValorCorte, restPi, restY;
 
 # relajar integralidad
 option maestro.relax_integrality 1;
@@ -20,18 +24,22 @@ option maestro.relax_integrality 1;
 # generar filas
 let numerocortes:= 0;
 repeat {
-	printf "\nIteracion %s, resolviendo relajacion actual\n", numerocortes; 
+	# if ValorCorte==1.000000 then {break;}
+	printf "\nIteracion %s, resolviendo relajacion actual, ultimo ValorCorte %3f\n", (numerocortes),(ValorCorte); 
 	solve maestro > "basura.txt";
+	printf "Resultado PL de modelo maestro: %7s\n\n", (solve_result); # verificar si alcanzo a terminar el PL
 	let s:=1; #esto define fuente para s-t corte
 	for {tt in V: tt<>s} {
 		let t:=tt; # esto define sumidero para s-t corte 
 		solve separacion > "basura.txt";
+		display solve_result; # verificar si logra separar en el tiempo estipulado
 		if (ValorCorte < 1) then {
-			#encontramos un corte violado
-			#debemos actualizar el problema maestro
+		# if (ValorCorte < 0.9999999999999999) then {
+			# encontramos un corte violado
+			# debemos actualizar el problema maestro
+			problem maestro;
 			let numerocortes:= numerocortes + 1;
 			let CORTE[numerocortes]:= {i in V: pi[i]=pi[s]};
-			problem maestro;
 			printf "Se encontro el 1-%s corte CORTE[%s]=", t, numerocortes; 
 			print {v in CORTE[numerocortes]} v;
 			break;
@@ -39,6 +47,7 @@ repeat {
 		printf "No se encontraron 1-%s cortes violados\n", t; 
 	}
 } while (ValorCorte <1);
+# } while (ValorCorte <0.9999999999999999);
 
 printf "Se agregaron en total %s cortes\n", numerocortes; 
 display x;

@@ -5,10 +5,11 @@ reset;
 
 option solver cplex;
 option solver_msg 0;
-option cplex_options 'timelimit=30'; 
+option cplex_options 'timelimit=180'; 
 option presolve 0;
+option cplex_options 'feasibility=1e-4';
 
-param num_data:= 8;
+param num_data:= 7;
 param datos symbolic:= "datos"&num_data&".dat";
 param nombre_reporte symbolic:= "grupo03-reporte"&num_data&".txt";
 param numerocortes_PL;
@@ -80,9 +81,9 @@ repeat {
 			if (ValorCorte < 1) then {
 				#encontramos un corte violado
 				#debemos actualizar el problema maestro
+				problem maestro;
 				let numerocortes:= numerocortes + 1;
 				let CORTE[numerocortes]:= {i in V: pi[i]=pi[s]};
-				problem maestro;
 				printf "Se encontro el 1-%s corte CORTE[%s]=", t, numerocortes; 
 				print {v in CORTE[numerocortes]} v;
 				break;

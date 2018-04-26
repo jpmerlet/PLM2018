@@ -1,0 +1,321 @@
+reset;
+
+model grupo03-modelos.mod;
+
+
+option solver cplex;
+
+param tlimit symbolic;
+param tinicial symbolic;
+param ttotal symbolic;
+param dif symbolic;
+param terminoPL;
+param terminoPLE;
+param valorPL;
+param valorPLE;
+param gap;
+
+param siguiente;
+param inicio;
+
+param ampltinicial;
+param ampltfinal;
+
+param datos symbolic;
+
+param rep symbolic;
+
+problem maestro: x, LargoTour, GradoEntrada, GradoSalida, DesigualdadCorte;
+problem separacion: y, pi, ValorCorte, restriccPi, restriccVar;
+
+print "Reporte DFJ Grupo 03" > "grupo03-dfj.txt";
+
+for {p in 1..9}
+{
+
+	reset data;
+	
+	let rep := "grupo03-dfj.txt";
+	
+	let terminoPL := 1;
+	let terminoPLE := 1;
+
+	let ampltinicial := _ampl_time;
+
+	let datos := "datos"&p&".dat";
+
+	data (datos);
+
+	printf "\n\nInstancia %1d:\n",(p) >> (rep);
+
+	let tlimit := 'timelimit=180';
+	let tinicial := 180;
+	let ttotal := 0;
+
+	## Resolución DFJ con generación de filas ##
+
+	# resolución PL #
+
+	option maestro.relax_integrality 1;
+
+	let numerocortes:= 0;
+
+	repeat 
+	{
+		let dif := 180 - ttotal;
+		
+		if (dif < 0) then
+		{
+			let terminoPL := 0;
+			break;
+		}
+		
+		let tinicial := dif;
+		let tlimit := 'timelimit='&(dif);
+		
+		option cplex_options (tlimit);
+		
+		solve maestro > "basura.txt";
+		let ttotal := ttotal + _solve_elapsed_time;
+		
+		if solve_result == 'limit' then 
+		{
+			let terminoPL := 0;
+			break;
+		}
+	
+		let s:=1; #esto define fuente para s-t corte
+
+		for {tt in V: tt<>s} 
+		{
+			let t:=tt; # esto define sumidero para s-t corte 
+			
+			let dif := 180 - ttotal;
+			
+			if (dif < 0) then
+			{
+				let terminoPL := 0;
+				break;
+			}
+			
+			let tinicial := dif;
+			let tlimit := 'timelimit='&(dif);
+		
+			option cplex_options (tlimit);
+			
+			solve separacion > "basura.txt";
+			let ttotal := ttotal + _solve_elapsed_time;
+			
+			if solve_result == 'limit' then 
+			{
+				let terminoPL := 0;
+				break;
+			}
+			
+			if (ValorCorte < 0.9999999999999999) then 
+			{
+				# encontramos un corte violado
+				# debemos actualizar el problema maestro
+				
+				problem maestro;
+				
+				let numerocortes:= numerocortes + 1;
+				let CORTE[numerocortes]:= {i in V: pi[i]=pi[s]};
+				
+				break;
+			}
+			
+			if terminoPL == 0 then
+			{
+				break;
+			}	
+		}
+	} while (ValorCorte < 0.9999999999999999);
+
+	let valorPL := LargoTour;
+
+	# resolución PLE #
+
+	# recuperamos integralidad y resolvemos
+
+	option maestro.relax_integrality 0;
+
+
+	let dif := 180 - ttotal;
+	
+	if (dif < 0) then
+	{
+		let terminoPLE := 0;
+		let dif := 0;
+	}
+	
+	let tlimit := 'timelimit='&(dif);
+
+
+	option cplex_options (tlimit);
+
+	solve maestro > "basura.txt";
+	let ttotal := ttotal + _solve_elapsed_time;
+	
+	if solve_result != 'limit' then 
+	{		
+
+		# aqui se actualiza ValorCorte para el x del problema entero
+		
+		let dif := 180 - ttotal;
+		
+		if (dif < 0) then
+		{
+			let terminoPLE := 0;
+			let dif := 0;
+		}
+		
+		let tinicial := dif;
+		let tlimit := 'timelimit='&(dif);
+		
+		option cplex_options (tlimit);
+		
+		solve separacion > "basura.txt"; # en verdad este debiese hacerse solo en caso de que se haya resolvido a tiempo el otro
+		let ttotal := ttotal + _solve_elapsed_time;
+		
+		if solve_result != 'limit' then 
+		{	
+				
+			# seguir agregando filas (en caso de que ValorCorte <1) 
+
+			repeat 
+			{	
+				
+				let dif := 180 - ttotal;
+				
+				if (dif < 0) then
+				{
+					let dif := 0;
+					let terminoPLE := 0;
+				}
+				
+				let tinicial := dif;
+				let tlimit := 'timelimit='&(dif);
+					
+			
+				option cplex_options (tlimit);	
+						
+				solve maestro > "basura.txt";
+				let ttotal := ttotal + _solve_elapsed_time;
+				
+				if solve_result == 'limit' then 
+				{
+					let terminoPLE := 0;
+					break;
+				}
+
+				else
+				{			
+					
+					let s:=1; #esto define fuente para s-t corte
+					
+					for {tt in V: tt<>s} 
+					{
+					
+						let t:=tt; # esto define sumidero para s-t corte 
+						
+						let dif := 180 - ttotal;
+						
+						if (dif < 0) then
+						{
+							let dif := 0;
+							let terminoPLE := 0;
+						}
+						
+						let tinicial := dif;
+						let tlimit := 'timelimit='&(dif);
+						
+						option cplex_options (tlimit);	
+						
+						solve separacion > "basura.txt";
+						let ttotal := ttotal + _solve_elapsed_time;
+						
+						if solve_result == 'limit' then 
+						{
+							let terminoPLE:= 0;
+							break;
+						}
+						
+						if (ValorCorte < 1) then 
+						{
+							#encontramos un corte violado
+							#debemos actualizar el problema maestro
+							problem maestro;
+							
+							let numerocortes:= numerocortes + 1;
+							let CORTE[numerocortes]:= {i in V: pi[i]=pi[s]};
+							
+							break;
+						}	
+					}
+				}
+				
+			} while (ValorCorte <1);
+		}
+
+		else
+		{
+			let terminoPLE := 0;
+		}
+	}
+
+	else
+	{
+		let terminoPLE := 0;
+	}
+
+	let valorPLE := LargoTour;
+
+
+	# escribiendo reporte #
+
+	let ampltfinal := _ampl_time - ampltinicial;
+	let ttotal := ttotal + _solve_elapsed_time;
+	
+
+	printf "\nTiempo total de ampl usado: %4f", (ampltfinal) >> (rep);
+	printf "\nTiempo total de solver usado: %4f", (ttotal) >> (rep);
+
+	if (terminoPL == 1) then
+	{
+		printf "\nSe resolvió la relajación lineal y dio un valor de %4f",(valorPL) >> (rep);
+	}
+	else
+	{
+		printf "\nNo se resolvió la relajación lineal" >> (rep);
+	}
+
+	if (terminoPLE == 1) then
+	{
+		printf "\nSe resolvió el problema entero y dio un valor de %4f",(valorPLE) >> (rep);
+
+		let siguiente:=0;
+		let inicio:=1;
+
+		printf "\nEl tour optimo es: 1 " >> (rep);
+			repeat
+			{
+				let siguiente:= sum {(inicio,j) in E: x[inicio,j] = 1} j;
+				if siguiente<>1 then 
+				{
+					printf "%3d ", (siguiente) >> (rep);
+					let inicio := siguiente;
+				}
+			}while(siguiente<>1);
+	}
+	else
+	{
+		printf "\nNo se resolvió el problema entero" >> (rep);
+	}
+
+	if (terminoPL == 1 and terminoPLE == 1) then
+	{
+		printf "\nEl gap de integralidad fue: %3d %", (((valorPLE - valorPL)/valorPLE)*100) >> (rep);
+		printf "\nEl total de cortes agregados fue: %5d", (numerocortes) >> (rep);
+	}
+}

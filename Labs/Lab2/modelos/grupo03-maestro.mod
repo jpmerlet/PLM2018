@@ -13,4 +13,4 @@ minimize LargoTour: sum {(i,j) in E} c[i,j]*x[i,j];
 subject to GradoSalida {i in V}: sum {(p,j) in E: p=i} x[p,j] = 1;
 subject to GradoEntrada {i in V}: sum {(p,j) in E: j=i} x[p,j] = 1;
 
-subject to DesigualdadCorte {k in 1..numerocortes: card(CORTE[k])<n and 1 in CORTE[k] and card(CORTE[k])>1}: sum {(i,j) in E: (i in CORTE[k] and j not in CORTE[k])} x[i,j] >= 1;
+subject to DesigualdadCorte {k in 1..numerocortes: card(CORTE[k])<n and 1 in CORTE[k] and card(CORTE[k])>=1}: sum {(i,j) in E: (i in CORTE[k] and j not in CORTE[k])} x[i,j] >= 1;

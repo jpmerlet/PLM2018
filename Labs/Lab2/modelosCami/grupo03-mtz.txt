@@ -1,0 +1,75 @@
+Reporte MTZ Grupo 03
+
+
+Instancia 1:
+
+Tiempo total de ampl usado: 0.031250
+Tiempo total de solver usado: 1.813000
+Se resolvió la relajación lineal y dio un valor de 2.117647
+Se resolvió el problema entero y dio un valor de 39.000000
+El tour optimo es: 1  12  14   3  11  13  10   2   8   9  17   5   4   7  15  16   6 
+El gap de integralidad fue:  94 %
+
+Instancia 2:
+
+Tiempo total de ampl usado: 0.031250
+Tiempo total de solver usado: 0.907000
+Se resolvió la relajación lineal y dio un valor de 835.384615
+Se resolvió el problema entero y dio un valor de 937.000000
+El tour optimo es: 1   2   3   4   6   5   7   8   9  10  14  15  12  13  11  16  19  20  18  17  21  22  26  23  24  25 
+El gap de integralidad fue:  10 %
+
+Instancia 3:
+
+Tiempo total de ampl usado: 0.046875
+Tiempo total de solver usado: 180.079000
+Se resolvió la relajación lineal y dio un valor de 535.571429
+No se resolvió el problema entero
+
+Instancia 4:
+
+Tiempo total de ampl usado: 0.078125
+Tiempo total de solver usado: 101.469000
+Se resolvió la relajación lineal y dio un valor de 5935.295597
+Se resolvió el problema entero y dio un valor de 6905.000000
+El tour optimo es: 1   5   3  18  17  16  38  40  39  37  36  41  22  21  25  24  23  20  19   2   9  10   8   7   6  52  50  53  51  49  30  29  26  28  27   4  14  12  11  13  15  42  48  43  47  44  46  45  35  33  34  32  31 
+El gap de integralidad fue:  14 %
+
+Instancia 5:
+
+Tiempo total de ampl usado: 0.109375
+Tiempo total de solver usado: 180.109000
+Se resolvió la relajación lineal y dio un valor de 37987.265873
+No se resolvió el problema entero
+
+Instancia 6:
+
+Tiempo total de ampl usado: 0.046875
+Tiempo total de solver usado: 180.140000
+Se resolvió la relajación lineal y dio un valor de 149.674419
+No se resolvió el problema entero
+
+Instancia 7:
+
+Tiempo total de ampl usado: 0.109375
+Tiempo total de solver usado: 16.063000
+Se resolvió la relajación lineal y dio un valor de 1438.232143
+Se resolvió el problema entero y dio un valor de 1608.000000
+El tour optimo es: 1  34   3  14  36   6   7   5   8  33   9  37  10  38  12  20  21  41  19  40  39  11  52  15  13  16  17  18  53  26  25  43  22  23  42  51  24  55  28  50  46  31  47  56  35   2   4  49  32  48  45  54  44  29  30  27 
+El gap de integralidad fue:  10 %
+
+Instancia 8:
+
+Tiempo total de ampl usado: 0.109375
+Tiempo total de solver usado: 29.782000
+Se resolvió la relajación lineal y dio un valor de 1722.858462
+Se resolvió el problema entero y dio un valor de 1839.000000
+El tour optimo es: 1  16  15  48   8  37   9  41  42  10  43  44  45  12  46  13  36  21  22  49  23  24  50  60  26  64  30  56  32  63  53  52  25  31  54  34  65  39   3   5  40   6   7  58  59  35  57  33  55  51  29  28  27  20  47  11  61  14  17  18  19  62   2  38   4 
+El gap de integralidad fue:   6 %
+
+Instancia 9:
+
+Tiempo total de ampl usado: 0.156250
+Tiempo total de solver usado: 180.140000
+Se resolvió la relajación lineal y dio un valor de 34008.587500
+No se resolvió el problema entero

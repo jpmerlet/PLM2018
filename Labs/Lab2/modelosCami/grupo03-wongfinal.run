@@ -1,0 +1,131 @@
+reset;
+model grupo03-modelos.mod;
+
+
+option solver cplex;
+
+param tlimit symbolic;
+param tinicial symbolic;
+param ttotal symbolic;
+param dif symbolic;
+
+param terminoPL;
+param terminoPLE;
+param valorPL;
+param valorPLE;
+
+param siguiente;
+param inicio;
+
+param ampltinicial;
+param ampltfinal;
+
+param datos symbolic;
+
+param rep symbolic;
+
+problem WONGmodel: x, f, g, LargoTour, GradoSalida, GradoEntrada, restWONG1, restWONG2, restWONG3, restWONG4, restWONG5, restWONG6, restWONG7, restWONG8;
+
+print "Reporte WONG Grupo 03" > "grupo03-wong.txt";
+
+
+
+for {p in 1..8}
+{
+
+	reset data;
+	
+	let rep := "grupo03-wong.txt";
+
+	let terminoPL := 1;
+	let terminoPLE := 1;
+
+	let ampltinicial := _ampl_time;
+
+	let datos := "datos"&p&".dat";
+
+	data (datos);
+
+	printf "\n\nInstancia %1d:\n",(p) >> (rep);
+
+	let tlimit := 'timelimit=180';
+	let tinicial := 180;
+	let ttotal := 0;
+		
+	option cplex_options (tlimit);
+	
+	option WONGmodel.relax_integrality 1; solve;
+	let valorPL := LargoTour;
+	
+	
+	if solve_result == 'limit' then 
+	{
+		let terminoPL := 0;
+	}
+		
+	
+	let ttotal := ttotal + _solve_elapsed_time;
+	
+	let dif := 180 - ttotal;
+	
+	if (dif < 0) then 
+	{
+		let dif := 0;
+	}
+	
+	let tinicial := dif;
+	let tlimit := 'timelimit='&(dif);
+	
+	option cplex_options (tlimit);
+	
+	option WONGmodel.relax_integrality 0; solve;
+	let valorPLE := LargoTour;
+	
+	if solve_result == 'limit' then 
+	{
+		let terminoPLE := 0;
+	}
+			
+	let ampltfinal := _ampl_time - ampltinicial;
+	let ttotal := ttotal + _solve_elapsed_time;
+
+	printf "\nTiempo total de ampl usado: %4f", (ampltfinal) >> (rep);
+	printf "\nTiempo total de solver usado: %4f", (ttotal) >> (rep);
+
+	if (terminoPL == 1) then
+	{
+		printf "\nSe resolvió la relajación lineal y dio un valor de %4f",(valorPL) >> (rep);
+	}
+	else
+	{
+		printf "\nNo se resolvió la relajación lineal" >> (rep);
+	}
+
+	if (terminoPLE == 1) then
+	{
+		printf "\nSe resolvió el problema entero y dio un valor de %4f",(valorPLE) >> (rep);
+
+		let siguiente:=0;
+		let inicio:=1;
+
+		printf "\nEl tour optimo es: 1 " >> (rep);
+			repeat
+			{
+				let siguiente:= sum {(inicio,j) in E: x[inicio,j] = 1} j;
+				if siguiente<>1 then 
+				{
+					printf "%3d ", (siguiente) >> (rep);
+					let inicio := siguiente;
+				}
+			}while(siguiente<>1);
+	}
+	else
+	{
+		printf "\nNo se resolvió el problema entero" >> (rep);
+	}
+
+	if (terminoPL == 1 and terminoPLE == 1) then
+	{
+		printf "\nEl gap de integralidad fue: %3d %", (((valorPLE - valorPL)/valorPLE)*100) >> (rep);
+	}
+}
