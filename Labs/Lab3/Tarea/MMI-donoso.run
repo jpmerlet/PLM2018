@@ -1,0 +1,36 @@
+reset;
+problem Initial;
+option solver cplex;
+option cplex_options 'mipstartstatus=0 mipstartvalue=0 time=60';
+
+## cargar modelo ##
+model MMI-donoso.mod;
+
+## variables auxiliares ##
+param input_file symbolic;
+param k_star integer;
+param mejorPeso;
+
+for {num_instancia in {1..1}}{
+	let input_file:= "bipartito"&num_instancia&".dat";
+	data (input_file);
+
+	## resolver en forma 1 ##
+	problem forma1;
+	for {size in I}{
+		let k:= size;
+		solve;
+		if k==1 then {
+			reset data mejorPeso;
+			let mejorPeso:= pesoMatching;
+		}
+		else {
+			if pesoMatching > mejorPeso then {
+				reset data k_star, mejorPeso;
+				let mejorPeso:=pesoMatching;
+				let k_star:= k;
+			}
+		}
+		reset data k;
+	}
+}
