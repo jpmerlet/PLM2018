@@ -1,3 +1,4 @@
+## Archivo (MMI-donoso.mod) ##
 set A;
 set B;
 set E within A cross B;
@@ -39,5 +40,5 @@ var t integer;
 subject to  paridad_3: sum {(i,j) in E} x[i,j] = 2*t + 1;
 
 problem forma1: pesoMatching, x, cubrir, paridad_1;
-problem forma2: pesoMatching, x, lambda, y, cubrir, paridad_2, unicidadK, cota_y;
+problem forma2: pesoMatching, x, lambda, y, cubrir, paridad_2, unicidadK, cota_y, solucion;
 problem forma3: pesoMatching, x, t, cubrir, paridad_3;

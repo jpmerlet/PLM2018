@@ -1,7 +1,9 @@
+## Archivo (MMI-donoso.run) ##
 reset;
 problem Initial;
 option solver cplex;
-option cplex_options 'mipstartstatus=0 mipstartvalue=0 time=60';
+#option solver_msg 0;
+option cplex_options 'mipstartstatus=0 mipstartvalue=0 time=60 ';
 
 ## cargar modelo ##
 model MMI-donoso.mod;
@@ -10,27 +12,74 @@ model MMI-donoso.mod;
 param input_file symbolic;
 param k_star integer;
 param mejorPeso;
+param cardinal_E;
+param cardinal_M;
+param tiempo_ejecucion;
+param tpo_metodo;
 
-for {num_instancia in {1..1}}{
+print "## Archivo (MMI-donoso.txt) ##" > "MMI-donoso.txt";
+
+for {num_instancia in {1..10}}{
+	# recuperar nombre instancia y cargar datos
 	let input_file:= "bipartito"&num_instancia&".dat";
 	data (input_file);
+	let cardinal_E:= card(E);
+	printf "\n\nInstancia %10s\n\n",(input_file) >> "MMI-donoso.txt";
+	printf "num-vertices: %4d\n", (n) >> "MMI-donoso.txt";
+	printf "num-aristas: %4d\n", (cardinal_E) >> "MMI-donoso.txt";
 
 	## resolver en forma 1 ##
-	problem forma1;
+	#problem forma1;
+	let tiempo_ejecucion:= _total_solve_time;
 	for {size in I}{
 		let k:= size;
-		solve;
+		solve forma1 > "basura.txt";
 		if k==1 then {
 			reset data mejorPeso;
 			let mejorPeso:= pesoMatching;
 		}
 		else {
 			if pesoMatching > mejorPeso then {
-				reset data k_star, mejorPeso;
+				reset data k_star, mejorPeso, cardinal_M;
 				let mejorPeso:=pesoMatching;
 				let k_star:= k;
+				let cardinal_M:= card({(i,j) in E: x[i,j]>0});
 			}
 		}
 		reset data k;
 	}
+	let tpo_metodo:= _total_solve_time - tiempo_ejecucion;
+	let k:=k_star;
+	if (solve_result=='limit' or tpo_metodo>60) then{
+		printf "el metodo 1 no resolvio la instacia\n" >> "MMI-donoso.txt";
+	}
+	else{
+		printf "tpo-metodo 1: %4f  valor-MMI: %4f  cardinal-MMI: %4d\n",(tpo_metodo),(mejorPeso),(cardinal_M) >> "MMI-donoso.txt";
+	}
+	
+	## resolver con forma 2 ##
+	let tiempo_ejecucion:=_total_solve_time;
+	solve forma2 >> "basura.txt";
+	let tpo_metodo:= _total_solve_time - tiempo_ejecucion;
+	if (solve_result=='limit' or tpo_metodo>60) then{
+		printf "el metodo 2 no resolvio la instacia\n" >> "MMI-donoso.txt";
+	}
+	else{
+		let cardinal_M:= card({(i,j) in E: x[i,j]>0});
+		printf "tpo-metodo 2: %4f  valor-MMI: %4f  cardinal-MMI: %4d\n",(tpo_metodo),(pesoMatching),(cardinal_M) >> "MMI-donoso.txt";
+	}
+	
+	## resolver con forma 3 ##
+	let tiempo_ejecucion:=_total_solve_time;
+	solve forma3 >> "basura.txt";
+	let tpo_metodo:= _total_solve_time - tiempo_ejecucion;
+	if (solve_result=='limit' or tpo_metodo>60) then{
+		printf "el metodo 3 no resolvio la instacia\n" >> "MMI-donoso.txt";
+	}
+	else{
+		let cardinal_M:= card({(i,j) in E: x[i,j]>0});
+		printf "tpo-metodo 3: %4f  valor-MMI: %4f  cardinal-MMI: %4d\n",(tpo_metodo),(pesoMatching),(cardinal_M) >> "MMI-donoso.txt";
+	}
+
+	reset data A,B,E,c;
 }
