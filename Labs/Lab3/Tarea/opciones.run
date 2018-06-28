@@ -1,0 +1,5 @@
+option presolve 0;
+option solver cplex;
+option cplex_options
+'presolve=0 probe=-1 mipsearch=1 heuristicfreq=-1 \
+mipcuts=-1 splitcuts=-1 mcfcuts=-1 threads=1 varsel=1';

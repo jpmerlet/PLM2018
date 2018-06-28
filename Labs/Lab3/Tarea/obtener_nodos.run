@@ -1,0 +1,9 @@
+    let begin := 11+match(solve_message,"iterations");
+    let end := match(solve_message,"branch")-1;
+    #display num(substr(solve_message,begin,end-begin));
+
+    # encontrar MIP simplex number
+    let begin_mip := match(solve_message,"\n");
+    let end_mip:= match(solve_message,"MIP")-1;
+
+    #display num(substr(solve_message,begin_mip,end_mip-begin_mip));

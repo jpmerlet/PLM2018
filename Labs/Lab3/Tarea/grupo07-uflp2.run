@@ -1,0 +1,118 @@
+reset; model grupo07-uflp2.mod;
+include opciones.run;
+
+set J:= {7,7+10,7+30,7+60};
+set A:= union {k in {0..40}} {1+k*0.1};
+set inSet;
+set inSet_anterior default {};
+set outSet;
+
+param instancia symbolic;
+param costo symbolic;
+param num_bb symbolic;
+param num_simplex symbolic;
+param in_set symbolic;
+param out_set symbolic;
+
+# parametros para recuperar num_bb y num_simplex
+param begin integer;
+param end integer;
+param begin_mip integer;
+param end_mip integer;
+
+# parametros para los promedios en Frio
+param promT_frio default 0;
+param promS_frio default 0;
+param promB_frio default 0; 
+
+# parametros para los promedios en Tibio
+param promT_tibio default 0;
+param promS_tibio default 0;
+param promB_tibio default 0; 
+
+
+
+print "## Archivo (grupo03-kp.txt). Entregado por Grupo (07): Juan Donoso Javier Santibanez ##" > "grupo07-uflp2.txt";
+for {X in J}{
+	let instancia:= "UFLP"&X&".dat";
+	data (instancia);
+	printf "\nInstancia %10s\nFrio:\n",(instancia) >> "grupo07-uflp2.txt";
+	
+	# resolver instancia en frio
+	option cplex_options $cplex_options 'mipstartvalue=0 mipstartstatus=0';
+	printf "%7s | %10s | %7s | %7s | %7s | %3s | %3s \n",("Alpha"), ('tpo-cpu'), ("num-simplex"), ("num-B&B"), ("costo"), ("IN"), ("OUT") >> "grupo07-uflp2.txt";
+	for {a in A}{
+		let alpha:=a; solve;
+		let promT_frio:= promT_frio +_solve_system_time;
+		
+
+		# recuperar num_simplex y num_B&B
+		include obtener_nodos.run;
+		let num_bb:=substr(solve_message,begin,end-begin);
+		let num_simplex:= substr(solve_message,begin_mip,end_mip-begin_mip);
+		let promS_frio:= promS_frio + num(num_simplex);
+		let promB_frio:= promB_frio + num(num_bb);
+
+		# recuperar in_set y out_set
+		let inSet:= {f in F: y[f] = 1} diff inSet_anterior;
+		let outSet:= inSet_anterior diff {f in F: y[f] = 1};
+
+		let in_set := "{ ";
+		for {f in inSet}{
+			let in_set:= in_set&f&" ";
+		}
+		let in_set:= in_set&"}";
+
+		let out_set := "{ ";
+		for {f in outSet}{
+			let out_set:= out_set&f&" ";
+		}
+		let out_set:= out_set&"}";
+		
+		printf "%4f    | %10f     | %4s     | %4s     | %4f   |   %10s    |    %10s   \n",(alpha),(_solve_system_time),(num_simplex),(num_bb),(costototal),(in_set),(out_set)>> "grupo07-uflp2.txt";
+		let inSet_anterior:= {f in F: y[f] = 1};
+
+	}
+	# resolver instancia en tibio
+	option cplex_options $cplex_options 'mipstartvalue=1 mipstartstatus=1';
+	printf "\n\nTibio:\n">> "grupo07-uflp2.txt";
+	printf "%7s | %10s | %7s | %7s | %7s | %3s | %3s \n",("Alpha"), ('tpo-cpu'), ("num-simplex"), ("num-B&B"), ("costo"), ("IN"), ("OUT") >> "grupo07-uflp2.txt";
+	
+	let inSet_anterior:= {};
+	for {aa in A}{
+		let alpha:=aa; solve;
+		let promT_tibio:= promT_tibio +_solve_system_time;
+
+		# recuperar num_simplex y num_B&B
+		include obtener_nodos.run;
+		let num_bb:=substr(solve_message,begin,end-begin);
+		let num_simplex:= substr(solve_message,begin_mip,end_mip-begin_mip);
+		let promS_tibio:= promS_tibio + num(num_simplex);
+		let promB_tibio:= promB_tibio + num(num_bb);
+
+		# recuperar in_set y out_set
+		let inSet:= {f in F: y[f] = 1} diff inSet_anterior;
+		let outSet:= inSet_anterior diff {f in F: y[f] = 1};
+
+		let in_set := "{ ";
+		for {f in inSet}{
+			let in_set:= in_set&f&" ";
+		}
+		let in_set:= in_set&"}";
+
+		let out_set := "{ ";
+		for {f in outSet}{
+			let out_set:= out_set&f&" ";
+		}
+		let out_set:= out_set&"}";
+		
+		printf "%4f    | %10f     | %4s     | %4s     | %4f   |   %10s    |    %10s   \n",(alpha),(_solve_system_time),(num_simplex),(num_bb),(costototal),(in_set),(out_set)>> "grupo07-uflp2.txt";
+		let inSet_anterior:= {f in F: y[f] = 1};
+	}
+	printf "Promedios\nFrio: Tiempo %f. Simplex %f. Nodos B&B %f\n",(promT_frio/card(A)),(promS_frio/card(A)),(promB_frio/card(A)) >> "grupo07-uflp2.txt";
+	printf "Tibio: Tiempo %f. Simplex %f. Nodos B&B %f\n\n",(promT_tibio/card(A)),(promS_tibio/card(A)),(promB_tibio/card(A)) >> "grupo07-uflp2.txt";
+	reset data F, C open, conn;
+	let inSet_anterior:= {};
+}
+
+
