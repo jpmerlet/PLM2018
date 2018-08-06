@@ -1,0 +1,36 @@
+## Archivo automatizacionGencol.run. Entregado por Grupo05: JP Donoso, Emir Chacra ##
+reset;
+option solver cplex;
+
+#Iteraciones para resolver con gencol.mod
+param Tiempo;
+param Mensaje symbolic;
+param Mend;
+param Minic;
+param Iterat;
+param IteratTot default 0;
+param SimplexGencol {1..90};
+param TiempoGencol {1..90};
+model grupo05-mcfloss-gencol.mod;
+for{m in 1..9}
+{
+	data ("mcfinst0"&m&".dat");
+	let Tiempo:= _total_solve_system_time;
+	include grupo05-mcfloss-gencol.run;
+	#Guarda tiempo de iteracion
+	let TiempoGencol[m] := _total_solve_system_time - Tiempo;
+	#Guarda iteraciones simplex
+	let SimplexGencol[m] := IteratTot;
+	reset data n, n_d, s, t, d, loss, A, c, u, servicio, costocamino, beta, iter ,flag, origen, destino, g, P, Path;	
+}
+# for{m in 10..90}
+# {
+# 	data ("mcfinst"&m&".dat");
+# 	let Tiempo:= _total_solve_system_time;
+# 	include grupo05-mcfloss-gencol.run;
+# 	#Guarda tiempo de iteracion
+# 	let TiempoGencol[m] := _total_solve_system_time - Tiempo;
+# 	#Guarda iteraciones simplex
+# 	let SimplexGencol[m] := IteratTot;
+# 	reset data n, n_d, s, t, d, loss, A, c, u, servicio, costocamino, beta, iter ,flag, origen, destino, g, P, Path;	
+# }

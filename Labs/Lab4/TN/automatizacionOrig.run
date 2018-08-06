@@ -1,0 +1,37 @@
+## Archivo automatizacionOrig.run. Entregado por Grupo05: JP Donoso, Emir Chacra ##
+reset;
+option solver cplex;
+
+#Parametros auxiliares generales
+param Sbegin;
+param Send;
+param Tiempo;
+
+#Iteraciones para resolver con original.mod
+param SimplexOrig {1..90};
+param TiempoOrig {1..90};
+model grupo05-mcfloss-original.mod;
+for{m in 1..9}
+{
+	data ("mcfinst0"&m&".dat");
+	solve;
+	#Guarda tiempo de iteracion
+	let TiempoOrig[m] := _solve_system_time;
+	#Guarda iteraciones simplex
+	let Sbegin:=1+match(solve_message, "\n");
+	let Send:= match(solve_message, "dual")-1;
+	let SimplexOrig[m]:= num(substr(solve_message,Sbegin,Send-Sbegin));
+	reset data n, n_d, s, t, d, loss, A, c, u;	
+}
+# for{m in 10..90}
+# {
+# 	data ("mcfinst"&m&".dat");
+# 	solve;
+# 	#Guarda tiempo de iteracion
+# 	let TiempoOrig[m] := _solve_system_time;
+# 	#Guarda iteraciones simplex
+# 	let Sbegin:=1+match(solve_message, "\n");
+# 	let Send:= match(solve_message, "dual")-1;
+# 	let SimplexOrig[m]:= num(substr(solve_message,Sbegin,Send-Sbegin));
+# 	reset data n, n_d, s, t, d, loss, A, c, u;	
+# }
