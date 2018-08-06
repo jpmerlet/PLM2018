@@ -1,0 +1,7 @@
+## Archivo (grupo07-uflp.run). Entregado por Grupo (07): ()
+reset; model grupo07-uflp.mod;
+include opciones.run;
+option cplex_options $cplex_options 'mipstartvalue=0 mipstartstatus=0 time=5';
+suffix priority IN, integer, >=0, <=9999;
+
+for {}
