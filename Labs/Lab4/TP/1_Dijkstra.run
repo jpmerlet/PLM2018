@@ -1,0 +1,44 @@
+### Dijsktra ####
+### Requiere grafo G=(V,A), origen, destino, funcion de costos g
+### Requiere ademas tener definido en el modelo parametros auxiliares
+### "aux", "distancia {V}", "predecesor {V}"
+### conjuntos auxiliares "Q" 
+### conjunto auxiliar "minimos" (debe ser declarado ordered: set minimos ordered;)
+### conjunto auxiliar "camino" (within A)
+#################
+
+let distancia[origen]:= 0;  # Distancia del origen al origen
+let predecesor[origen]:= 0; # Origen no tiene predecesor
+
+# Inicializacion
+let Q:= V;
+for {v in V diff {origen}} {
+	let distancia[v]:= Infinity;
+	let predecesor[v]:= 0;
+	}
+
+repeat while (card(Q)>0) {
+	# Encontrar nodo con distancia minima
+	let minimos := {v in Q: distancia[v] = min {i in Q} distancia[i]};
+	let aux:=first(minimos);
+	
+	# Si la distancia es infinito, terminamos 
+	if distancia[aux]=Infinity  then break;
+	
+	let Q := Q diff {aux};
+	# Actualizar distancias fuera de Q 
+	for {x in Q: (aux,x) in A} {
+		 if (distancia[aux]+g[aux,x]<distancia[x]) 	then {
+				let distancia[x]:=distancia[aux]+g[aux,x];
+				let predecesor[x]:=aux;
+		 }
+	}	
+}
+
+let camino:= {};
+let aux:=destino;
+repeat while (predecesor[aux] != origen) {
+	let camino:= camino union {(predecesor[aux],aux)};
+	let aux:=predecesor[aux];
+}
+let camino:= camino union {(origen, aux)};
