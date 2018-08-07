@@ -4,7 +4,8 @@ option solver cplex;
 
 #Parametros auxiliares generales
 param Sbegin;
-param Send;
+param Mend;
+param Mensaje symbolic;
 param Tiempo;
 
 #Iteraciones para resolver con original.mod
@@ -19,19 +20,21 @@ for{m in 1..9}
 	let TiempoOrig[m] := _solve_system_time;
 	#Guarda iteraciones simplex
 	let Sbegin:=1+match(solve_message, "\n");
-	let Send:= match(solve_message, "dual")-1;
-	let SimplexOrig[m]:= num(substr(solve_message,Sbegin,Send-Sbegin));
+	let Mensaje :=substr(solve_message,Sbegin,Sbegin+7);
+	let Mend:= match(Mensaje," ")-1;
+	let SimplexOrig[m]:= num(substr(Mensaje,1,Mend));
 	reset data n, n_d, s, t, d, loss, A, c, u;	
 }
-# for{m in 10..90}
-# {
-# 	data ("mcfinst"&m&".dat");
-# 	solve;
-# 	#Guarda tiempo de iteracion
-# 	let TiempoOrig[m] := _solve_system_time;
-# 	#Guarda iteraciones simplex
-# 	let Sbegin:=1+match(solve_message, "\n");
-# 	let Send:= match(solve_message, "dual")-1;
-# 	let SimplexOrig[m]:= num(substr(solve_message,Sbegin,Send-Sbegin));
-# 	reset data n, n_d, s, t, d, loss, A, c, u;	
-# }
+for{m in 10..90}
+{
+	data ("mcfinst"&m&".dat");
+	solve;
+	#Guarda tiempo de iteracion
+	let TiempoOrig[m] := _solve_system_time;
+	#Guarda iteraciones simplex
+	let Sbegin:=1+match(solve_message, "\n");
+	let Mensaje :=substr(solve_message,Sbegin,Sbegin+7);
+	let Mend:= match(Mensaje," ")-1;
+	let SimplexOrig[m]:= num(substr(Mensaje,1,Mend));
+	reset data n, n_d, s, t, d, loss, A, c, u;	
+}
